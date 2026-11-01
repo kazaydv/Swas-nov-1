@@ -62,7 +62,17 @@
   .mobile-nav-panel.open{max-height:200px;}
   .mobile-nav-panel a{display:block;padding:14px 20px;font-size:15px;font-weight:600;color:var(--black);border-top:1px solid var(--gray-line);}
   .mobile-nav-panel a:first-child{border-top:none;}
+html,body{overflow-x:clip !important;}
 
+/* Shopify-style sticky gallery: desktop only */
+@media (min-width:901px){
+  .pdp-grid{align-items:start;}
+  .gallery{
+    position:sticky;
+    top:80px;               /* space for the sticky header; adjust if needed */
+    align-self:start;
+  }
+}
   /* ---------- PDP HERO ---------- */
   .pdp{padding-top:40px;padding-bottom:48px;}
   .pdp-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}

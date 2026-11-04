@@ -17,8 +17,14 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '2213676740031563'); 
-fbq('track', 'Purchase');
+ fbq('init', '2213676740031563');
+fbq('track', 'PageView');
+(function(){ try {
+  var o=JSON.parse(sessionStorage.getItem('swas_order')||'null');
+  if(!o||o.sent||!o.ts||Date.now()-o.ts>600000) return;
+  fbq('track','Purchase',{value:o.value,currency:'NPR',content_name:o.pack,content_type:'product',num_items:1},{eventID:o.id});
+  o.sent=true; sessionStorage.setItem('swas_order',JSON.stringify(o));
+} catch(e){} })();
 </script>
 <noscript>
  <img height="1" width="1" 

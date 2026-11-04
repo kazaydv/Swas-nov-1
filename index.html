@@ -1037,6 +1037,7 @@ html,body{overflow-x:clip !important;}
     window.currentPack = { key: el.dataset.key, name: el.dataset.name, price: el.dataset.price };
   }
   function openOrder(){
+    if (window.fbq) fbq('track', 'InitiateCheckout');
     var pack = window.currentPack || { key: 'भ्यालु प्याक', name: 'भ्यालु प्याक', price: 'Rs 1,900' };
     document.getElementById('orderModal').classList.add('open');
     document.getElementById('modalPackLine').textContent = pack.name + ': ' + pack.price;

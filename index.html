@@ -1050,12 +1050,29 @@ html,body{overflow-x:clip !important;}
   function closeOrder(){ document.getElementById('orderModal').classList.remove('open'); }
   document.getElementById('orderModal').addEventListener('click', function(e){ if (e.target === this) closeOrder(); });
 
-  document.getElementById('orderForm').addEventListener('submit', function(e){
+    document.getElementById('orderForm').addEventListener('submit', function(e){
     e.preventDefault();
     if (ORDER_SCRIPT_URL) {
-      var sb = this.querySelector('button[type=submit]'); sb.disabled = true; sb.textContent = 'पठाउँदै...';
+      var sb = this.querySelector('button[type=submit]');
+      sb.disabled = true; sb.textContent = 'पठाउँदै...';
+      var pk = document.getElementById('package').value;
+      var pm = pk.replace(/,/g,'').match(/(\d{3,5})\s*$/);
+      var val = pm ? parseInt(pm[1],10) : 1900;
+      var order = {
+        value: val,
+        pack: val === 1200 ? 'Starter pack' : (val === 2400 ? 'Complete pack' : 'Value pack'),
+        id: 'o' + Date.now(),
+        ts: Date.now()
+      };
       fetch(ORDER_SCRIPT_URL, { method: "POST", mode: "no-cors", body: new FormData(this) })
-        .then(function(){ window.location.href = "thankyou.html"; });
+        .then(function(){
+          try { sessionStorage.setItem('swas_order', JSON.stringify(order)); } catch (x) {}
+          window.location.href = "thankyou.html";
+        })
+        .catch(function(){
+          sb.disabled = false; sb.textContent = 'Order Now';
+          alert('इन्टरनेट समस्या भयो। कृपया फेरि प्रयास गर्नुहोस्।');
+        });
     } else {
       alert("Order form ready: connect your ORDER_SCRIPT_URL at the top of the script tag to go live.");
     }

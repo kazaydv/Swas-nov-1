@@ -1019,6 +1019,20 @@ html,body{overflow-x:clip !important;}
   // ---------------------------------------------------------------
   const ORDER_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6XXOcOSYAWCvu2Bm4lQoiH4p8o1iZnOZ0JRc4xZOE84SiT2GO4f22IJmr8ujVgWTZZw/exec";
 
+  // Keep UTMs from the ad link for the whole visit (saved to the order sheet)
+  (function(){
+    var q = new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+      var v = q.get(k); if (v) { try { sessionStorage.setItem(k, v); } catch (x) {} }
+    });
+  })();
+  function getUtm(k){
+    var v = new URLSearchParams(location.search).get(k);
+    if (v) return v;
+    try { return sessionStorage.getItem(k) || ''; } catch (x) { return ''; }
+  }
+  function getCookie(n){ var m = document.cookie.match('(^|;)\\s*' + n + '=([^;]*)'); return m ? decodeURIComponent(m[2]) : ''; }
+
   function toNep(v){ return String(v).replace(/[0-9]/g,function(d){ return '0123456789'[d]; }); }
   function toggleNav(){ document.getElementById('mobileNavPanel').classList.toggle('open'); }
   function closeNav(){ document.getElementById('mobileNavPanel').classList.remove('open'); }
@@ -1064,7 +1078,24 @@ html,body{overflow-x:clip !important;}
         id: 'o' + Date.now(),
         ts: Date.now()
       };
-      fetch(ORDER_SCRIPT_URL, { method: "POST", mode: "no-cors", body: new FormData(this) })
+      // Send the original fields plus the names the Sheet script expects,
+      // UTMs, landing page and Meta dedup keys (event_id = pixel eventID).
+      var PACKS = { 1200: 'Starter Pack (1 box)', 1900: 'Value Pack (2 boxes)', 2400: 'Complete Pack (3 boxes)' };
+      var fd = new FormData(this);
+      fd.append('name', document.getElementById('fullName').value.trim());
+      fd.append('pack', PACKS[val] || order.pack);
+      fd.append('price', String(val));
+      fd.append('utm_source', getUtm('utm_source'));
+      fd.append('utm_medium', getUtm('utm_medium'));
+      fd.append('utm_campaign', getUtm('utm_campaign'));
+      fd.append('utm_content', getUtm('utm_content'));
+      fd.append('page', location.origin + location.pathname);
+      fd.append('event_id', order.id);
+      fd.append('currency', 'NPR');
+      fd.append('fbp', getCookie('_fbp'));
+      fd.append('fbc', getCookie('_fbc'));
+      fd.append('user_agent', navigator.userAgent);
+      fetch(ORDER_SCRIPT_URL, { method: "POST", mode: "no-cors", keepalive: true, body: fd })
         .then(function(){
           try { sessionStorage.setItem('swas_order', JSON.stringify(order)); } catch (x) {}
           window.location.href = "thankyou.html";

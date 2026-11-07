@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0B0B'/%3E%3Cellipse cx='32' cy='32' rx='18' ry='10' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-
+ <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -380,6 +380,14 @@ html,body{overflow-x:clip !important;}
   }
   .price-line{display:flex !important;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-bottom:16px;}
   .save-tag{display:inline-block;margin:0 !important;background:#1E9E4A;color:#fff !important;font-size:12.5px !important;font-weight:700;line-height:1.4;padding:3px 10px;border-radius:100px;white-space:nowrap;}
+
+  /* fixes: photos in former placeholders */
+  .ba-col-img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 40%;}
+  .effects-img-media>img{aspect-ratio:4/3.4;object-fit:cover;border-radius:var(--radius-lg);}
+  .howuse-card>img{aspect-ratio:1/1;object-fit:cover;margin-bottom:16px;}
+  img.compare-col-img{object-fit:contain;padding:0;border-radius:8px;display:block;}
+  .cc-label{font-size:13px;font-weight:700;}
+  .hero-acc{margin-bottom:6px;}
 </style>
 <style>.compare-note{font-size:13px;color:#6B6B6B;margin:14px 0 0;line-height:1.6;}</style><style>
 .ti-icon{height:30px;display:flex;align-items:center;justify-content:center;}
@@ -418,14 +426,14 @@ html,body{overflow-x:clip !important;}
 <div class="logo" href="lp.swas.site"><span class="oval"></span> SWAS</div>
 <nav class="main-nav">
 <a href="#details">विवरण</a>
-<a href="#reviews">ग्राहकका अनुभव</a>
+<a href="#reviews">भिडियो</a>
 <a href="#faq">प्रश्नोत्तर</a>
 </nav>
 <button class="btn" onclick="openOrder()">Order Now</button>
 </div>
 <div class="mobile-nav-panel" id="mobileNavPanel">
 <a href="#details" onclick="closeNav()">विवरण</a>
-<a href="#reviews" onclick="closeNav()">ग्राहकका अनुभव</a>
+<a href="#reviews" onclick="closeNav()">भिडियो</a>
 <a href="#faq" onclick="closeNav()">प्रश्नोत्तर</a>
 </div>
 </header>
@@ -434,21 +442,21 @@ html,body{overflow-x:clip !important;}
 <div class="wrap pdp-grid">
 <div class="gallery">
 <div class="gallery-main">
-<img alt="SWAS Mouth Patch box with three oval patches" id="mainImage" src="Images/cut-hero.jpg"/>
+<img alt="SWAS Mouth Patch लगाएर शान्त निद्रामा सुतिरहेका व्यक्ति" id="mainImage" src="Images/sleep-patch-night-2.jpg" width="1080" height="1080" fetchpriority="high"/>
 </div>
 <div class="gallery-thumbs">
-<div class="thumb active" onclick="setMain(this,'Images/cut-hero.jpg')"><img alt="" src="Images/cut-hero.jpg"/></div>
-
-<div class="thumb" onclick="setMain(this,'Images/swas-image.png')"><img alt="" src="Images/swas-image.png"/></div>
- <div class="thumb" onclick="setMain(this,'Images/swas-2.png')"><img alt="" src="Images/swas-2.png"/></div>
- <div class="thumb" onclick="setMain(this,'Images/swas-3.png')"><img alt="" src="Images/swas-3.png"/></div>
- <div class="thumb" onclick="setMain(this,'Images/swas-4.png')"><img alt="" src="Images/swas-4.png"/></div>
-<div class="thumb" onclick="setMain(this,'Images/cut-shape.png')"><img alt="" src="Images/cut-shape.png"/></div>
-<div class="thumb" onclick="setMain(this,'Images/cut-flatlay.jpg')"><img alt="" src="Images/cut-flatlay.jpg"/></div>
-<div class="thumb" onclick="setMain(this,'Images/cut-swoosh.jpg')"><img alt="" src="Images/cut-swoosh.jpg"/></div>
-<div class="thumb" onclick="setMain(this,'Images/cut-box.jpg')"><img alt="" src="Images/cut-box.jpg"/></div>
-<div class="thumb" onclick="setMain(this,'Images/sofa-to-bed.jpg')"><img alt="" src="Images/sofa-to-bed.jpg"/></div>
-<div class="thumb" onclick="setMain(this,'Images/social.jpg')"><img alt="" src="Images/social.jpg"/></div>
+<div class="thumb active" onclick="setMain(this,'Images/sleep-patch-night-2.jpg')"><img alt="SWAS Mouth Patch लगाएर शान्त निद्रामा सुतिरहेका व्यक्ति" src="Images/sleep-patch-night-2.jpg" width="60" height="60" decoding="async"/></div>
+<div class="thumb" onclick="setMain(this,'Images/worn-man-close.jpg')"><img alt="SWAS Mouth Patch लगाएर सुतिरहेका व्यक्ति" src="Images/worn-man-close.jpg" width="60" height="60" decoding="async"/></div>
+<div class="thumb" onclick="setMain(this,'Images/cut-hero.jpg')"><img alt="SWAS Mouth Patch box with three oval patches" src="Images/cut-hero.jpg" width="60" height="60" decoding="async"/></div>
+<div class="thumb" onclick="setMain(this,'Images/worn-woman-sleep.jpg')"><img alt="SWAS Mouth Patch लगाएर सुतिरहेकी महिला" src="Images/worn-woman-sleep.jpg" width="60" height="60" decoding="async"/></div>
+<div class="thumb" onclick="setMain(this,'Images/worn-woman-clean.jpg')"><img alt="SWAS Mouth Patch लगाएर सुतिरहेकी महिला" src="Images/worn-woman-clean.jpg" width="60" height="60" decoding="async"/></div>
+<div class="thumb" onclick="setMain(this,'Images/cut-swoosh.jpg')"><img alt="Patch away the snore" src="Images/cut-swoosh.jpg" width="60" height="60" decoding="async" loading="lazy"/></div>
+<div class="thumb" onclick="setMain(this,'Images/worn-man-navy.jpg')"><img alt="SWAS Mouth Patch लगाएर सुतिरहेका व्यक्ति" src="Images/worn-man-navy.jpg" width="60" height="60" decoding="async" loading="lazy"/></div>
+<div class="thumb" onclick="setMain(this,'Images/cut-flatlay.jpg')"><img alt="One strip a night, 30 strips per box" src="Images/cut-flatlay.jpg" width="60" height="60" decoding="async" loading="lazy"/></div>
+<div class="thumb" onclick="setMain(this,'Images/sofa-to-bed.jpg')"><img alt="Back in the bed, not on the sofa" src="Images/sofa-to-bed.jpg" width="60" height="60" decoding="async" loading="lazy"/></div>
+<div class="thumb" onclick="setMain(this,'Images/social.jpg')"><img alt="SWAS Mouth Patch user" src="Images/social.jpg" width="60" height="60" decoding="async" loading="lazy"/></div>
+<div class="thumb" onclick="setMain(this,'Images/cut-box.jpg')"><img alt="SWAS Mouth Patch box" src="Images/cut-box.jpg" width="60" height="60" decoding="async" loading="lazy"/></div>
+<div class="thumb" onclick="setMain(this,'Images/cut-shape.png')"><img alt="SWAS patch shape" src="Images/cut-shape.png" width="60" height="60" decoding="async" loading="lazy"/></div>
 </div>
 </div>
 <div class="buy-box">
@@ -456,37 +464,13 @@ html,body{overflow-x:clip !important;}
 <div class="hero-product">SWAS Mouth Patch</div>
 <h1>घुर्ने बानीले हैरान हुनुहुन्छ?</h1>
 <div class="tagline">घुराइको एक मुख्य कारण भनेकै सुत्दा मुखबाट सास फेर्नु हो।</div>
-<span class="hero-for">हरेक रात एउटा प्याच, पहिलो रातमै फरक</span>
-<div class="details-acc hero-acc">
-<details class="acc-item" open>
-<summary>समस्या (Problem)</summary>
-<div class="acc-body"><p>मुख खोलेर सुत्ने बानी छ? सुतिरहेको बेला मुखबाट हावा भित्र–बाहिर हुँदा मुख र घाँटी सुक्छ। त्यसैले बिहान उठ्दा घाँटी दुख्ने, मुख सुक्ने र असहज महसुस हुन्छ। साथै, मुख खोलेर सुत्दा जिब्रो र घाँटी वरिपरिका नरम तन्तु पछाडि सर्छन, जसले घुराइ निम्त्याउछ ।</p></div>
-</details>
-<details class="acc-item">
-<summary>समाधान (Solution)</summary>
-<div class="acc-body"><p>अब प्रयोग गर्नुहोस् SWAS Mouthpatch! यो नरम र आरामदायी प्याचले सुत्दा ओठ बन्द राख्न मद्दत गर्छ, यसको नियमित प्रयोगले तपाईंलाई नाकबाट सास फेर्ने बानी बसाल्न सहयोग गर्छ।</p></div>
-</details>
-<details class="acc-item">
-<summary>नतिजा (Result)</summary>
-<div class="acc-body"><p>नियमित प्रयोगसँगै मुख बन्द गरेर सुत्ने बानी विकास गर्न मद्दत मिल्छ। बिस्तारै मांसपेशी स्मृति (muscle memory) बन्छ र दिन प्रतिदिन मांसपेशी स्मृति प्रशिक्षित हुँदै जानेछ। मुख सुक्ने समस्या कम हुन्छ, घुराइ बन्द हुन्छ  र तपाईंको निद्रा अझ आरामदायी बन्छ।</p></div>
-</details>
-<details class="acc-item">
-<summary>मुखबाट होइन, नाकबाट सास किन फेर्ने?</summary>
-<div class="acc-body">
-<ul>
-<p><li>नाकले हावालाई फिल्टर, न्यानो र ओसिलो बनाउँदै फोक्सोसम्म पुर्‍याउन मद्दत गर्छ। खेलाडीहरूजस्तै सासमा ध्यान दिनु शरीरलाई सहज रूपमा काम गर्न सहयोगी हुन्छ।</li></p>
-<p><li>राति मुख खोलेर सुत्दा मुख र घाँटी सुक्ने, बिहान घाँटी दुख्ने र केही प्राय व्यक्तिमा मुख खोलेरै सुतनाले घुर्ने समस्या उत्पन्न हुन्छ र घुराइ झन् झन् बढ्छ। नाकबाट सास फेर्ने बानीले यी समस्या कम गर्न र आरामदायी निद्रामा सहयोग गर्छ ।</li></p>
-<p><li>SWAS Mouth Patch ले सुत्दा ओठ बन्द राख्न मद्दत गर्छ र नाकबाट सास फेर्ने बानीलाई प्रोत्साहन गर्छ।</li></p>
-</ul>
-</div>
-</details>
-</div>
+<span class="hero-for">हरेक रात एउटा प्याच, शान्त रातको सुरुवात</span>
 <div class="price-line">
 <span class="price-now" id="ppNow">Rs 1,900</span>
 <span class="price-was" id="ppWas">Rs 3,000</span>
 <span class="save-tag" id="ppSave">Rs 1,100 बचत</span>
 </div>
-<div class="pack-label">आफ्नो प्याक छान्नुहोस् · १-२ रातमै फरक महसुस गर्नुहोस्</div>
+<div class="pack-label">आफ्नो प्याक छान्नुहोस् · आजै सुरु गर्नुहोस्</div>
 <div class="pack-row">
 <div class="pack-pill" data-key="स्टार्टर प्याक" data-name="स्टार्टर प्याक" data-price="Rs 1,200" data-save="रु. ३०० बचत" data-was="Rs 1,500" onclick="selectPack(this)">
 <div class="pp-left"><span class="pp-name">स्टार्टर प्याक</span><span class="pp-qty">१ बक्स · ३० प्याच (हरेक रात एउटा, ३० रातसम्मलाई)</span></div>
@@ -507,11 +491,35 @@ html,body{overflow-x:clip !important;}
 <div class="ti"><span class="ti-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M13 3c-3 4-7 9-7 13a7 7 0 0014 0c0-4-4-9-7-13z" stroke="currentColor" stroke-width="1.5"/></svg></span>छालामैत्री टाँस्ने पदार्थ</div>
 <div class="ti"><span class="ti-icon"><span class="oval" style="width:26px;height:15px;border-width:4.5px;"></span></span>लगाउन सजिलो</div>
 <div class="ti"><span class="ti-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><rect x="2.5" y="7.5" width="21" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="13" r="2.8" stroke="currentColor" stroke-width="1.5"/></svg></span>Cash on Delivery</div>
-<div class="ti"><span class="ti-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M20.5 15.5A9 9 0 0 1 10.5 5.5a9 9 0 1 0 10 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>१-२ रातमै फरक महसुस गर्नुहोस्</div>
+<div class="ti"><span class="ti-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M20.5 15.5A9 9 0 0 1 10.5 5.5a9 9 0 1 0 10 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>शान्त रात, आरामदायी निद्रा</div>
+</div>
+<div class="details-acc hero-acc" style="margin-top:22px">
+<details class="acc-item">
+<summary>समस्या (Problem)</summary>
+<div class="acc-body"><p>मुख खोलेर सुत्ने बानी छ? सुत्दा मुखबाट सास फेर्दा बिहान उठ्दा मुख सुक्ने र असहज महसुस हुन सक्छ। साथै, खुला मुख रातभरको घुराइको एउटा मुख्य कारण पनि हो, जसले सँगै सुत्नेको निद्रा पनि बिथोल्छ।</p></div>
+</details>
+<details class="acc-item">
+<summary>समाधान (Solution)</summary>
+<div class="acc-body"><p>अब प्रयोग गर्नुहोस् SWAS Mouth Patch! यो नरम र आरामदायी प्याचले सुत्दा ओठ बन्द राख्न मद्दत गर्छ। नियमित प्रयोगले मुख बन्द गरेर सुत्ने बानी बसाल्न सहयोग गर्छ।</p></div>
+</details>
+<details class="acc-item">
+<summary>नतिजा (Result)</summary>
+<div class="acc-body"><p>नियमित प्रयोगसँगै मुख बन्द गरेर सुत्ने बानी बस्न सजिलो हुन्छ। बिहान मुख कम सुक्ने र रात अझ शान्त हुन सक्छ। अनुभव व्यक्तिअनुसार फरक हुन सक्छ।</p></div>
+</details>
+<details class="acc-item">
+<summary>मुखबाट होइन, नाकबाट सास किन फेर्ने?</summary>
+<div class="acc-body">
+<ul>
+<li>सुत्दा नाकबाट सास फेर्नु सबैभन्दा प्राकृतिक र आरामदायी तरिका हो।</li>
+<li>मुख खोलेर सुत्दा बिहान मुख सुक्ने र रातभर आवाज आउने हुन सक्छ। ओठ बन्द हुँदा रात अझ शान्त हुन्छ।</li>
+<li>SWAS Mouth Patch ले सुत्दा ओठ बन्द राख्न मद्दत गर्छ र नाकबाट सास फेर्ने बानीलाई प्रोत्साहन गर्छ।</li>
+</ul>
+</div>
+</details>
 </div>
 <div class="details-acc" id="details">
 <details class="acc-item" open="">
-<summary>यो उपचार होइन, राम्रो बानीतर्फको एउटा सानो कदम हो।</summary>
+<summary>राम्रो सुत्ने बानीतर्फ एउटा सानो कदम।</summary>
 <div class="acc-body">
 <p>एउटा प्याच। हरेक रात। ३० रातसम्म।</p>
 <p>SWAS ले सुत्दा ओठ बन्द राख्न मद्दत गर्छ। यसले मुखबाट सास फेर्ने बानी कम गर्दै नाकबाट सास फेर्ने बानीलाई प्रोत्साहन गर्छ।</p>
@@ -520,13 +528,13 @@ html,body{overflow-x:clip !important;}
 <details class="acc-item">
 <summary>SWAS का सम्भावित फाइदाहरू</summary>
 <div class="acc-body">
-<ul><li>बिहान मुख सुक्ने समस्या कम गर्न सहयोग</li><li>घाँटी सुक्ने समस्या कम गर्न सहयोग</li><li>नाकबाट सास फेर्ने बानीलाई प्रोत्साहन</li><li>केही अवस्थामा घुराइ कम गर्न सहयोग पुग्न सक्छ</li><li>नरम र छालामैत्री टाँस्ने पदार्थ</li></ul>
+<ul><li>सुत्दा ओठ बन्द राख्न सहयोग</li><li>बिहान मुख कम सुक्न सक्छ</li><li>नाकबाट सास फेर्ने बानीलाई प्रोत्साहन</li><li>सँगै सुत्नेको लागि पनि शान्त रात</li><li>नरम र छालामैत्री टाँस्ने पदार्थ</li></ul>
 </div>
 </details>
 <details class="acc-item">
 <summary>नाकबाट सास फेर्नु किन राम्रो?</summary>
 <div class="acc-body">
-<ul><li>नाकले भित्र जाने हावालाई फिल्टर र ओसिलो बनाउन मद्दत गर्छ।</li><li>नाकबाट सास फेर्नु शरीरको प्राकृतिक श्वासप्रश्वास प्रक्रिया हो।</li><li>यसले मुखबाट सास फेर्दा हुने सुक्खापन कम गर्न मद्दत गर्न सक्छ।</li></ul>
+<ul><li>नाकबाट सास फेर्नु सुत्दाको प्राकृतिक तरिका हो।</li><li>ओठ बन्द हुँदा बिहान मुख कम सुक्छ।</li><li>रात अझ शान्त र आरामदायी हुन सक्छ।</li></ul>
 </div>
 </details>
 <details class="acc-item">
@@ -539,100 +547,37 @@ html,body{overflow-x:clip !important;}
 </div>
 </div>
 </section>
-<!-- SNORING + BEFORE/AFTER -->
-<section class="chain-sec">
-<div class="wrap">
-<div class="chain-head">
-<span class="eyebrow">यो कुरा जान्न जरुरी छ।</span>
-<h2>सबै घुराइ सामान्य हुँदैन।</h2>
-<p style="font-weight:700;color:var(--black);font-size:17px;">के तपाईंको घुराइबीचमा अचानक सास रोकिएजस्तो हुन्छ?</p>
-<p><strong style="color:var(--accent);">घुर्नुको सबैभन्दा डरलाग्दो पक्ष आवाज होइन। बीचको मौनता हो।</strong> अँध्यारोमा छेउमा सुत्नेले सुन्छ: घुर्र... घुर्र... अनि अचानक सन्नाटा। एक सेकेन्ड, पाँच सेकेन्ड, दश सेकेन्ड। त्यसपछि हाँफ्दै एक्कासि सास तानिन्छ। sleep apnea भएकाहरूमा यस्तो एक रातमा धेरै पटक हुन सक्छ, र घुर्ने आफैँलाई केही थाहा हुँदैन।</p>
-<p style="font-weight:700;color:var(--black);">घुराइसँगै केही समय सास रोकिने, फेरि हाँफ्दै सास फेर्ने वा निद्रामा निसास्सिने लक्षण देखिन सक्छन्।</p>
-<p>यी Obstructive Sleep Apnea (OSA) का संकेत हुन सक्छन्।</p>
-<p>SWAS Sleep Apnea को उपचार होइन। यो जानकारीका लागि मात्र हो। सुत्दा सास रोकिने, हाँफ्ने वा निसास्सिने लक्षण देखिएमा चिकित्सकसँग परामर्श लिनुहोस्।</p>
-</div>
-<div class="chain-steps">
-<div class="chain-step">
-<!-- Swap for a real illustration: <img class="chain-img" src="Images/chain-1.jpg" alt="Mouth breather"> -->
-<div class="img-placeholder chain-img">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            फोटो राख्नुहोस्
-          </div>
-<h3>मुखबाट सास फेर्ने</h3>
-<p>केही व्यक्तिमा सुत्दा नाकको सट्टा मुखबाट सास फेर्ने बानी हुन्छ।</p>
-</div>
-<div class="chain-arrow">→</div>
-<div class="chain-step">
-<!-- Swap for a real illustration: <img class="chain-img" src="Images/chain-2.jpg" alt="Snoring"> -->
-<div class="img-placeholder chain-img">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            फोटो राख्नुहोस्
-          </div>
-<h3>घुराइ</h3>
-<p>सास जाने बाटो साँघुरिँदा वरिपरिका नरम तन्तुहरू कम्पन हुन सक्छन्। यही कम्पनले घुराइको आवाज निकाल्छ।</p>
-</div>
-<div class="chain-arrow">→</div>
-<div class="chain-step">
-<!-- Swap for a real illustration: <img class="chain-img" src="Images/chain-3.jpg" alt="Sleep apnea"> -->
-<div class="img-placeholder chain-img">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            फोटो राख्नुहोस्
-          </div>
-<h3>Sleep Apnea</h3>
-<p>केही व्यक्तिमा सुत्दा सास जाने बाटो पटक–पटक अवरुद्ध भएर केही समय सास रोकिन सक्छ।</p>
-</div>
-</div>
-<div class="chain-stat">
-<span class="chain-stat-num">करिब १ अर्ब</span>
-<span class="chain-stat-text">विश्वभरका वयस्कमध्ये करिब १ अर्बमा Obstructive Sleep Apnea रहेको अनुमान गरिएको छ। (Benjafield et al., Lancet Respiratory Medicine, 2019)</span>
-</div>
-<div class="chain-risks">
-<p>उपचार नगरिएको Sleep Apnea ले <strong>उच्च रक्तचाप, मुटुसम्बन्धी समस्या र अन्य स्वास्थ्य जोखिम</strong> बढाउन सक्छ।</p>
-</div>
-<div class="chain-note">
-<p>SWAS Sleep Apnea को उपचार होइन। सुत्दा सास रोकिने, हाँफ्ने वा निसास्सिने लक्षण देखिएमा चिकित्सकसँग परामर्श लिनुहोस्। नाक बन्द हुने, सास फेर्न समस्या हुने वा Sleep Apnea को शंका भएका व्यक्तिले चिकित्सकीय सल्लाहबिना Mouth Patch प्रयोग गर्नु हुँदैन।</p>
-</div>
-</div>
-</section>
 <!-- REVIEWS -->
 <section class="reviews-sec" id="reviews">
 <div class="wrap">
 <div class="reviews-head">
-<span class="eyebrow">वास्तविक ग्राहकका अनुभव</span>
+<span class="eyebrow">क्रिएटरहरूको अनुभव</span>
 <h2>SWAS प्रयोग गर्ने हाम्रा क्रिएटरहरू</h2>
 </div>
 <div class="video-grid">
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-palisha.jpg" preload="metadata"><source src="Videos/Palisha_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-palisha.jpg" preload="none"><source data-src="Videos/Palisha_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-sajesha.jpg" preload="metadata"><source src="Videos/Sajesha_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-sajesha.jpg" preload="none"><source data-src="Videos/Sajesha_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-asmu.jpg" preload="metadata"><source src="Videos/Asmu_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-asmu.jpg" preload="none"><source data-src="Videos/Asmu_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-sushma.jpg" preload="metadata"><source src="Videos/Sushma_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-sushma.jpg" preload="none"><source data-src="Videos/Sushma_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-anjali.jpg" preload="metadata"><source src="Videos/Anjali_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-anjali.jpg" preload="none"><source data-src="Videos/Anjali_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-krisala.jpg" preload="metadata"><source src="Videos/Krisala_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-krisala.jpg" preload="none"><source data-src="Videos/Krisala_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-jasmine.jpg" preload="metadata"><source src="Videos/Jasmine_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-jasmine.jpg" preload="none"><source data-src="Videos/Jasmine_Swas.mp4" type="video/mp4"></video></div>
 </div>
 <div class="video-card">
-<div class="verified-tag"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</div>
-<div class="video-frame"><video autoplay="" controls="" loop="" muted="" playsinline="" poster="Images/poster-prapti.jpg" preload="metadata"><source src="Videos/Prapti_Swas.mp4" type="video/mp4"></video></div>
+<div class="video-frame"><video controls="" loop="" muted="" playsinline="" poster="Images/poster-prapti.jpg" preload="none"><source data-src="Videos/Prapti_Swas.mp4" type="video/mp4"></video></div>
 </div>
 </div>
   <section class="snore-sec">
@@ -640,30 +585,22 @@ html,body{overflow-x:clip !important;}
 <div class="snore-head">
 <span class="eyebrow">एउटा कुरा याद गर्नुभएको छ?</span>
 <h2>मुख खोलेर सुत्नु घुराइको एक प्रमुख कारण हो</h2>
-<p>मुख खोलेर सुत्दा मुख सुक्ने र घाँटी असहज हुने समस्या हुन सक्छ। केही अवस्थामा मुखबाट सास फेर्ने बानीले घुराइमा पनि योगदान दिन सक्छ।</p>
+<p>मुख खोलेर सुत्दा बिहान मुख सुक्न सक्छ, र मुखबाट सास फेर्ने बानी रातभरको घुराइको एउटा कारण पनि हुन सक्छ।</p>
 </div>
 <div class="ba-grid">
 <div class="ba-col ba-before">
-<!-- Swap for a real photo: <img class="ba-col-img" src="Images/before.jpg" alt="Before SWAS"> -->
-<div class="img-placeholder ba-col-img">
-<svg fill="none" height="26" viewbox="0 0 24 24" width="26"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            "अघि" को फोटो राख्नुहोस्
-          </div>
+<img class="ba-col-img" src="Images/before.jpg" alt="मुख खोलेर सुतिरहेका व्यक्ति" loading="lazy" decoding="async">
 <h3>SWAS प्रयोग नगर्दा</h3>
 <ul>
 <li>सुत्दा मुख खुला रहने बानी</li>
 <li>घुराइले छेउमा सुत्ने व्यक्तिलाई पनि बाधा</li>
-<li>बिहान मुख सुक्ने र घाँटी दुख्ने</li>
+<li>बिहान मुख सुक्ने</li>
 <li>निद्रामा असहजता</li>
 </ul>
 </div>
 <div class="ba-arrow">→</div>
 <div class="ba-col ba-after">
-<!-- Swap for a real photo: <img class="ba-col-img" src="Images/after.jpg" alt="After SWAS"> -->
-<div class="img-placeholder ba-col-img">
-<svg fill="none" height="26" viewbox="0 0 24 24" width="26"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            "पछि" को फोटो राख्नुहोस्
-          </div>
+<img class="ba-col-img" src="Images/after.jpg" alt="SWAS लगाएर शान्त निद्रामा सुतिरहेका व्यक्ति" loading="lazy" decoding="async">
 <h3>SWAS प्रयोग गर्दा</h3>
 <ul>
 <li><svg fill="none" height="15" viewbox="0 0 16 16" width="15"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> सुत्दा ओठ बन्द राख्न सहयोग</li>
@@ -679,19 +616,15 @@ html,body{overflow-x:clip !important;}
 <section class="effects-img-sec">
 <div class="wrap effects-img-grid">
 <div class="effects-img-media">
-<!-- Swap for a real photo: <img src="Images/snoring-effects.jpg" alt=""> -->
-<div class="img-placeholder">
-<svg fill="none" height="30" viewbox="0 0 24 24" width="30"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-          फोटो राख्नुहोस्
-        </div>
+<img src="Images/snoring-effects.jpg" alt="घुराइले सँगै सुत्ने व्यक्तिको निद्रा बिथोलिएको" loading="lazy" decoding="async">
 </div>
 <div class="effects-img-copy">
 <span class="eyebrow">घुराइको असर तपाईंलाई मात्र होइन।</span>
 <h2>तपाईं घुर्नुहुन्छ, तर निद्रा दुवैको बिग्रिन्छ।</h2>
 <ul class="effects-img-list">
 <li><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> राति पटक–पटक निद्रा खुल्ने</li>
-<li><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> बिहान मुख सुक्ने र घाँटी दुख्ने</li>
-<li><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> दिनभरि थकान महसुस हुने</li>
+<li><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> बिहान उठ्दा मुख सुक्ने</li>
+<li><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> कहिलेकाहीँ सँगै सुत्नेले अर्को कोठा खोज्नुपर्ने</li>
 <li><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> सँगै सुत्ने व्यक्तिको निद्रा पनि बिथोलिने</li>
 </ul>
 </div>
@@ -708,34 +641,22 @@ html,body{overflow-x:clip !important;}
 </div>
 <div class="howuse-grid">
 <div class="howuse-card">
-<!-- Swap for a real photo: <img src="Images/howto-1.jpg" alt="Clean and dry lips"> -->
-<div class="img-placeholder">
-<svg fill="none" height="28" viewbox="0 0 24 24" width="28"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            चरण 1 को फोटो राख्नुहोस्
-          </div>
+<img src="Images/howto-1.jpg" alt="सुत्नुअघि ओठ सफा गर्दै" loading="lazy" decoding="async">
 <div class="howuse-num">1</div>
 <h3>ओठ सफा गर्नुहोस्</h3>
 <p>सुत्नुअघि ओठ सफा गरी राम्ररी सुकाउनुहोस्।</p>
 </div>
 <div class="howuse-card">
-<!-- Swap for a real photo: <img src="Images/howto-2.jpg" alt="Apply the patch"> -->
-<div class="img-placeholder">
-<svg fill="none" height="28" viewbox="0 0 24 24" width="28"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            चरण 2 को फोटो राख्नुहोस्
-          </div>
+<img src="Images/howto-2.jpg" alt="ओठमाथि प्याच लगाउँदै" loading="lazy" decoding="async">
 <div class="howuse-num">2</div>
 <h3>प्याच लगाउनुहोस्</h3>
 <p>पछाडिको कागज निकालेर बन्द ओठमाथि प्याच लगाउनुहोस्।</p>
 </div>
 <div class="howuse-card">
-<!-- Swap for a real photo: <img src="Images/howto-3.jpg" alt="Peel off in the morning"> -->
-<div class="img-placeholder">
-<svg fill="none" height="28" viewbox="0 0 24 24" width="28"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg>
-            चरण 3 को फोटो राख्नुहोस्
-          </div>
+<img src="Images/howto-3.jpg" alt="प्याच लगाएर सुतिरहेकी महिला" loading="lazy" decoding="async">
 <div class="howuse-num">3</div>
-<h3>बिहान निकाल्नुहोस्</h3>
-<p>बिहान प्याचलाई बिस्तारै निकाल्नुहोस्।</p>
+<h3>आरामसँग सुत्नुहोस्</h3>
+<p>रातभर लगाएर सुत्नुहोस्, बिहान बिस्तारै निकाल्नुहोस्।</p>
 </div>
 </div>
 </div>
@@ -753,15 +674,13 @@ html,body{overflow-x:clip !important;}
 <thead><tr>
 <th></th>
 <th class="brand">
-<!-- Swap for a real photo: <img class="compare-col-img" src="Images/cut-shape.png" alt="SWAS"> -->
-<div class="img-placeholder compare-col-img"><svg fill="none" height="20" viewbox="0 0 24 24" width="20"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg></div>
-            SWAS
-          </th>
+<img class="compare-col-img" src="Images/cut-shape.png" alt="SWAS" loading="lazy" decoding="async">
+<div class="cc-label">SWAS</div>
+</th>
 <th class="other">
-<!-- Swap for a real photo: <img class="compare-col-img" src="Images/ordinary-tape.jpg" alt="Ordinary tape"> -->
-<div class="img-placeholder compare-col-img"><svg fill="none" height="20" viewbox="0 0 24 24" width="20"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><circle cx="8.5" cy="9.5" fill="currentColor" r="1.5"></circle><path d="M21 16l-5.5-5.5L9 17" stroke="currentColor" stroke-width="1.5"></path></svg></div>
-            साधारण टेप
-          </th>
+<img class="compare-col-img" src="Images/ordinary-tape.jpg" alt="Ordinary tape" loading="lazy" decoding="async">
+<div class="cc-label">साधारण टेप</div>
+</th>
 </tr></thead>
 <tbody>
 <tr><td>बनावट</td><td class="brand-cell">विशेष ओभल आकार, बीचमा खुला</td><td class="other-cell">सामान्य समतल पट्टी</td></tr>
@@ -769,133 +688,10 @@ html,body{overflow-x:clip !important;}
 <tr><td>लगाउने तरिका</td><td class="brand-cell">ओठमाथि लगाउने</td><td class="other-cell">टेपको प्रकारअनुसार फरक</td></tr>
 <tr><td>हटाउने</td><td class="brand-cell">बिस्तारै निकाल्ने</td><td class="other-cell">टाँसिने गुणअनुसार फरक</td></tr>
 </tbody>
-</table><p class="compare-note">बीचमा खुला भाग भए पनि Mouth Patch सबैका लागि सुरक्षित हुन्छ भन्ने ग्यारेन्टी हुँदैन। प्रयोग गर्नुअघि आफ्नो श्वासप्रश्वासको अवस्था विचार गर्नुहोस्।</p>
+</table><p class="compare-note">नाक बन्द भएको वा सास फेर्न गाह्रो हुने अवस्थामा Mouth Patch प्रयोग नगर्नुहोस्।</p>
 </div>
 </section>
 
-<!-- ================================================================
-           WRITTEN REVIEWS: hand-edit these 10 cards with real reviews.
-           For each card: replace "Customer Name" and the review sentence.
-           To add a real photo: replace the <div class="rc-photo-fallback">
-           block with <img class="rc-photo" src="Images/your-photo.jpg" alt="">
-           Only keep the "Verified" badge on cards with real customers.
-           Unfilled cards (still saying "Customer Name") are automatically
-           hidden on page load, and the star average above only counts
-           cards you've actually filled in.
-           ================================================================ -->
-<div class="review-summary" id="reviewSummary"></div>
-<div class="reviews-grid-full">
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-<div class="review-card">
-<div class="rc-top">
-<div class="rc-photo-fallback"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
-<div class="rc-name-wrap">
-<span class="rc-name">Customer Name</span>
-<span class="rc-verified"><svg fill="none" height="10" viewbox="0 0 16 16" width="10"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>प्रमाणित</span>
-</div>
-</div>
-<div class="rc-stars">★★★★★</div>
-<p class="rc-text">यहाँ वास्तविक ग्राहकको समीक्षा राख्नुहोस्।</p>
-</div>
-</div>
 </div>
 </section>
 <!-- FAQ -->
@@ -908,8 +704,8 @@ html,body{overflow-x:clip !important;}
 <div class="faq-a">SWAS सुत्दा ओठमाथि लगाउने नरम प्याच हो। यसले ओठ बन्द राख्न र नाकबाट सास फेर्ने बानीलाई प्रोत्साहन गर्न मद्दत गर्छ।</div>
 </details>
 <details class="faq-item">
-<summary>के SWAS लगाउँदा निसास्सिन सक्छ?</summary>
-<div class="faq-a">SWAS को बीचमा सानो खुला भाग हुन्छ। तर Mouth Patch सबैका लागि उपयुक्त हुँदैन। नाक बन्द हुने, सास फेर्न गाह्रो हुने वा Sleep Apnea को शंका भएका व्यक्तिले चिकित्सकको सल्लाहबिना प्रयोग गर्नु हुँदैन।</div>
+<summary>के SWAS सबैका लागि उपयुक्त छ?</summary>
+<div class="faq-a">SWAS को बीचमा सानो खुला भाग हुन्छ। तर नाक बन्द भएको वा सास फेर्न गाह्रो हुने अवस्थामा प्रयोग नगर्नुहोस्। कुनै स्वास्थ्य समस्या भए प्रयोग गर्नुअघि डाक्टरसँग सल्लाह लिनुहोस्।</div>
 </details>
 <details class="faq-item">
 <summary>के यो संवेदनशील छालाका लागि उपयुक्त छ?</summary>
@@ -968,7 +764,7 @@ html,body{overflow-x:clip !important;}
 </div>
 <div class="footer-col">
 <h4>हाम्रो वाचा</h4>
-<p>३० रातको Money-back Guarantee (लागू हुने सर्तअनुसार)</p>
+<p>३० रातको Guarantee (सर्त लागू)</p>
 <p>Hypoallergenic र Latex-free टाँस्ने पदार्थ</p>
 <p>नेपालभर निःशुल्क Cash on Delivery</p>
 </div>
@@ -1002,7 +798,7 @@ html,body{overflow-x:clip !important;}
 <p class="modal-sub" id="modalPackLine">भ्यालु प्याक: Rs 1,900</p>
 <form id="orderForm">
 <div class="field"><label for="fullName">पूरा नाम</label><input autocomplete="name" id="fullName" name="fullName" placeholder="जस्तै: राम श्रेष्ठ" required="" type="text"/></div>
-<div class="field"><label for="phone">फोन नम्बर (१० अङ्कको)</label><input autocomplete="tel" id="phone" inputmode="numeric" maxlength="10" name="phone" pattern="[0-9]{10}" placeholder="98XXXXXXXX" required="" title="१० अङ्कको मोबाइल नम्बर लेख्नुहोस्" type="tel"/></div>
+<div class="field"><label for="phone">फोन नम्बर (१० अङ्कको)</label><input autocomplete="tel" id="phone" inputmode="numeric" maxlength="16" name="phone" pattern="9[0-9]{9}" placeholder="98XXXXXXXX" required="" title="१० अङ्कको मोबाइल नम्बर लेख्नुहोस्" type="tel"/></div>
 <div class="field"><label for="address">डेलिभरी ठेगाना</label><input autocomplete="street-address" id="address" name="address" placeholder="जिल्ला, नगरपालिका, वडा नं., टोल/चोक" required="" type="text"/></div>
 <div class="field">
 <label for="package">आफ्नो प्याक छान्नुहोस्</label>
@@ -1126,24 +922,41 @@ html,body{overflow-x:clip !important;}
     stickyObserver.observe(firstSection);
   }
 
-  // Reels: auto-slide every 5s on mobile (pauses while the user is swiping)
+
+
+  // Videos: load a reel only when it is on screen, pause when it leaves
   (function(){
-    var grid = document.querySelector('.video-grid');
-    if (!grid) return;
-    var idx = 0, timer = null;
-    function cards(){ return grid.querySelectorAll('.video-card'); }
-    function go(n){
-      var cs = cards(); if (!cs.length) return;
-      idx = (n + cs.length) % cs.length;
-      grid.scrollTo({left: cs[idx].offsetLeft - grid.offsetLeft - 16, behavior: 'smooth'});
+    var vids = document.querySelectorAll('.video-frame video');
+    function load(v){
+      if (v.dataset.loaded) return;
+      v.querySelectorAll('source[data-src]').forEach(function(sr){ sr.src = sr.dataset.src; });
+      v.dataset.loaded = '1'; v.load();
     }
-    function start(){ stop(); timer = setInterval(function(){ go(idx + 1); }, 5000); }
-    function stop(){ if (timer) { clearInterval(timer); timer = null; } }
-    grid.addEventListener('pointerdown', stop, {passive: true});
-    grid.addEventListener('mouseenter', stop);
-    grid.addEventListener('mouseleave', start);
-    grid.addEventListener('touchend', function(){ setTimeout(start, 6000); }, {passive: true});
-    start();
+    vids.forEach(function(v){
+      v.addEventListener('pointerdown', function(){ load(v); }, {passive:true});
+      v.addEventListener('click', function(){ if (!v.dataset.loaded){ load(v); v.play().catch(function(){}); } });
+    });
+    if (!('IntersectionObserver' in window)) { vids.forEach(load); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var v = e.target;
+        if (e.isIntersecting && e.intersectionRatio >= 0.6) { load(v); var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+        else if (!v.paused) { v.pause(); }
+      });
+    }, { threshold: [0, 0.6] });
+    vids.forEach(function(v){ io.observe(v); });
+  })();
+
+  // Phone: turn ९८४... into 984..., drop +977 / spaces / dashes
+  (function(){
+    var ph = document.getElementById('phone');
+    if (!ph) return;
+    ph.addEventListener('input', function(){
+      var v = ph.value.replace(/[०-९]/g, function(d){ return String('०१२३४५६७८९'.indexOf(d)); }).replace(/\D/g, '');
+      if (v.length > 10 && v.indexOf('977') === 0) v = v.slice(3);
+      v = v.slice(0, 10);
+      if (ph.value !== v) ph.value = v;
+    });
   })();
 
   // Accordions: opening one closes the others

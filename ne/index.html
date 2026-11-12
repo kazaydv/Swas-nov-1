@@ -593,7 +593,16 @@ function fireBemobConversion(price){
     fd.append('utm_medium', q.get('utm_medium') || '');
     fd.append('utm_campaign', q.get('utm_campaign') || '');
     fd.append('utm_content', q.get('utm_content') || '');
-    fd.append('page', window.location.href.split('?')[0]);
+    fd.append('page', window.location.origin + window.location.pathname);
+    // Meta dedup keys, same as the main mouthpatch.store page. event_id is
+    // also used as the Purchase eventID on thankyou.html.
+    var orderId = 'o' + Date.now();
+    function getCookie(n){ var m = document.cookie.match('(^|;)\\s*' + n + '=([^;]*)'); return m ? decodeURIComponent(m[2]) : ''; }
+    fd.append('event_id', orderId);
+    fd.append('currency', 'NPR');
+    fd.append('fbp', getCookie('_fbp'));
+    fd.append('fbc', getCookie('_fbc'));
+    fd.append('user_agent', navigator.userAgent);
 
     btn.disabled = true; btn.textContent = window.preeti("tkfO{+sf] c8{/ k7fOFb}") + '…';
 
@@ -604,9 +613,18 @@ function fireBemobConversion(price){
        in Apps Script's own Executions log. */
     fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', keepalive: true, body: fd })
       .then(function(){
-        fbq('track', 'Purchase', { value: price, currency: 'NPR', content_name: pack.value });
-        fireBemobConversion(price);
-        showSuccess(pack.getAttribute('data-label') || pack.value, phone);
+        // Purchase (Meta pixel + BeMob) now fires once on thankyou.html,
+        // using this order's id as the eventID.
+        var PACK_NAMES = { 1200: 'Starter pack', 1900: 'Value pack', 2400: 'Complete pack' };
+        try {
+          sessionStorage.setItem('swas_ne_order', JSON.stringify({
+            id: orderId, ts: Date.now(), value: price,
+            pack: PACK_NAMES[price] || pack.value,
+            label: pack.getAttribute('data-label') || '',
+            phone: phone, cid: BEMOB_CID
+          }));
+        } catch (x) {}
+        window.location.href = 'thankyou.html';
       })
       .catch(function(){
         btn.disabled = false; btn.textContent = window.preeti("d]/f] c8{/ ug'{xf]:");

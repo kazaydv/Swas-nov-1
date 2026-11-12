@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>धन्यवाद | स्वास माउथ प्याच</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://nea.swas.site/Images/Untitled-design-10.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel: same SWAS New Pixel as mouthpatch.store and /ne/ -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2213676740031563');
+fbq('track', 'PageView');
+
+/* Purchase fires here once per order, only when the visitor arrives from
+   the /ne/ order form within 10 minutes. eventID is the same event_id that
+   was sent to the Google Sheet, so Meta can match browser + server events.
+   A refresh or a direct visit does not fire it again. */
+(function(){ try {
+  var o = JSON.parse(sessionStorage.getItem('swas_ne_order') || 'null');
+  if (!o || o.sent || !o.ts || Date.now() - o.ts > 600000) return;
+  fbq('track', 'Purchase', { value: o.value, currency: 'NPR', content_name: o.pack, content_type: 'product', num_items: 1 }, { eventID: o.id });
+  // BeMob conversion (same pixel as before, now fired from here)
+  var b = 'https://lj6l2.bemobtrk.com/conversion.gif?payout=' + encodeURIComponent(o.value) + '&txid=SWAS-' + encodeURIComponent(o.id);
+  if (o.cid) b += '&cid=' + encodeURIComponent(o.cid);
+  (new Image(1, 1)).src = b;
+  o.sent = true; sessionStorage.setItem('swas_ne_order', JSON.stringify(o));
+} catch (e) {} })();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2213676740031563&amp;ev=PageView&amp;noscript=1"></noscript>
+<!-- End Meta Pixel -->
+
+<style>
+  :root{ --bg:#FBF6EC; --panel:#FFFEFA; --ink:#232A2E; --sub:#6B6459; --line:rgba(35,42,46,0.15); --accent:#D97757; --accent-hover:#C2683F; --tag-bg:#EFE7D6; --ok:#2F7D4F;
+    --serif:'Noto Serif Devanagari', Georgia, serif; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:'Noto Sans Devanagari', system-ui, sans-serif; -webkit-font-smoothing:antialiased; line-height:1.7;}
+  .wrap{max-width:640px; margin:0 auto; padding:32px 20px 60px;}
+  .masthead{display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--sub); border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:26px;}
+  .masthead b{color:var(--ink); font-weight:600;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:30px 22px; text-align:center;}
+  .tick{width:60px; height:60px; border-radius:50%; background:var(--ok); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;}
+  h1{font-family:var(--serif); font-weight:700; font-size:clamp(23px,4.6vw,28px); line-height:1.3; margin:0 0 10px;}
+  .lede{color:var(--sub); margin:0 0 18px;}
+  .sum{background:var(--tag-bg); border-radius:4px; padding:12px 16px; margin:0 0 20px; text-align:left;}
+  .sum p{margin:2px 0;}
+  .steps{list-style:none; counter-reset:s; margin:0 0 20px; padding:0; text-align:left;}
+  .steps li{counter-increment:s; position:relative; padding:0 0 0 38px; margin:0 0 12px;}
+  .steps li::before{content:counter(s, devanagari); position:absolute; left:0; top:2px; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-size:13px; display:flex; align-items:center; justify-content:center;}
+  .help{font-size:15px; margin:0 0 18px;}
+  .help a{color:var(--ink); font-weight:600;}
+  .cta{display:block; text-align:center; background:var(--accent); color:var(--ink); text-decoration:none; font-weight:600; font-size:17px; padding:15px 24px; border-radius:4px;}
+  .cta:hover{background:var(--accent-hover);}
+  footer{border-top:1px solid var(--line); margin-top:30px; padding-top:18px; font-size:12.5px; color:var(--sub); text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead"><span><b class="preeti-text">:jf; dfpy Kofr</b></span><span class="preeti-text">lg›f / :jf; k|Zjf;</span></div>
+
+  <div class="card">
+    <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></div>
+    <h1 class="preeti-text">wGojfb. tkfO{+sf] c8{/ k|fKt eof].</h1>
+    <p class="lede" id="msg"><span class="preeti-text">xfdL l5§} kmf]g u/]/ tkfO{+sf] c8{/ kSsf ug]{5f}+. ;fdfg cfOk'u]kl5 dft| k};f ltg'{xf]:.</span></p>
+
+    <div class="sum" id="sum" hidden>
+      <p><b><span class="preeti-text">Kofs]h</span>:</b> <span id="sPack"></span></p>
+      <p><b><span class="preeti-text">hDdf, 8]lne/Ldf ltg]{</span>:</b> <span id="sTotal"></span></p>
+    </div>
+
+    <ol class="steps">
+      <li class="preeti-text"><b>xfdL kmf]g u5f}{+</b> / c8{/ kSsf u5f}{+. s[kof kmf]g glhs} /fVg'xf]:.</li>
+      <li class="preeti-text"><b>@–# sfo{lbglet|</b> g]kfne/ lgMz'Ns 8]lne/L x'G5.</li>
+      <li class="preeti-text"><b>;fdfg cfOk'u]kl5 dft|</b> k};f ltg'{xf]:.</li>
+    </ol>
+
+    <p class="help"><span class="preeti-text">k|Zg 5&lt;</span> <a href="tel:9740265823" class="preeti-text">(&amp;$)@^%*@#</a> <span class="preeti-text">df kmf]g ug'{xf]:.</span></p>
+    <a class="cta preeti-text" href="./">k]hdf kms{g'xf]:</a>
+  </div>
+
+  <footer><span class="preeti-text">gf]6</span>: <span class="preeti-text">of] Kofr l:nk PlKgof sf] pkrf/ xf]Og / lrlsT;f ;]jfsf] ljsNk xf]Og.</span></footer>
+</div>
+
+<script>
+/**
+ * Preeti (legacy Nepali font) -> Unicode Devanagari, for text that got
+ * pasted in raw (still keyboard-coded in Preeti instead of converted).
+ *
+ * USAGE: wrap ONLY the raw Preeti fragment itself in
+ *   <span class="preeti-text">...</span>
+ * Never wrap a whole paragraph/heading that also contains English
+ * words, a brand/product name, or numbers/prices. Preeti reuses plain
+ * Latin letters AND plain digit keys as its keyboard layout (e.g. the
+ * "6" key types ट, not the numeral 6 — real Devanagari numerals come
+ * from Shift+digit), so the converter cannot tell "60ml" or "Spray"
+ * apart from actual Preeti-coded text and WILL corrupt it. Anything
+ * inside class="no-convert" is always skipped as an extra safeguard if
+ * you must nest English inside a converted block.
+ *
+ * The map below is the full Preeti keyboard layout (all consonants,
+ * matras, conjuncts, reph, digits) plus the standard reordering rules
+ * Preeti needs (matras typed before a consonant but rendered after it,
+ * reph placement, vowel-sign collisions, etc.) — not a partial guess.
+ */
+(function () {
+  const charMap = {
+    '÷':'/', 'v':'ख', 'r':'च', '"':'ू', '~':'ञ्', 'z':'श', 'ç':'ॐ', 'f':'ा',
+    'b':'द', 'n':'ल', 'j':'व', '×':'×', 'V':'ख्', 'R':'च्', 'ß':'द्म', '^':'६',
+    'Û':'!', 'Z':'श्', 'F':'ँ', 'B':'द्य', 'N':'ल्', 'Ë':'ङ्ग', 'J':'व्', '6':'ट',
+    '2':'द्द', '¿':'रू', '>':'श्र', ':':'स्', '§':'ट्ट', '&':'७', '£':'घ्', '•':'ड्ड',
+    '.':'।', '«':'्र', '*':'८', '„':'ध्र', 'w':'ध', 's':'क', 'g':'न', 'æ':'“',
+    'c':'अ', 'o':'य', 'k':'प', 'W':'ध्', 'Ö':'=', 'S':'क्', 'Ò':'¨', '_':')',
+    '[':'ृ', 'Ú':'’', 'G':'न्', 'ˆ':'फ्', 'C':'ऋ', 'O':'इ', 'Î':'ङ्ख', 'K':'प्',
+    '7':'ठ', '¶':'ठ्ठ', '3':'घ', '9':'ढ', '?':'रु', ';':'स', "'":'ु', '#':'३',
+    '¢':'द्घ', '/':'र', '+':'ं', 'ª':'ङ', 't':'त', 'p':'उ', '|':'्र', 'x':'ह',
+    'å':'द्व', 'd':'म', '`':'ञ', 'l':'ि', 'h':'ज', 'T':'त्', 'P':'ए', 'Ý':'ट्ठ',
+    '\\':'्', 'Ù':';', 'X':'ह्', 'Å':'हृ', 'D':'म्', '@':'२', 'Í':'ङ्क', 'L':'ी',
+    'H':'ज्', '4':'द्ध', '±':'+', '0':'ण्', '<':'?', '8':'ड', '¥':'र्‍', '$':'४',
+    '¡':'ज्ञ्', ',':',', '©':'र', '(':'९', '‘':'ॅ', 'u':'ग', 'q':'त्र', '}':'ै',
+    'y':'थ', 'e':'भ', 'a':'ब', 'i':'ष्', '‰':'झ्', 'U':'ग्', 'Q':'त्त', ']':'े',
+    '˜':'ऽ', 'Y':'थ्', 'Ø':'्य', 'E':'भ्', 'A':'ब्', 'M':'ः', 'Ì':'न्न', 'I':'क्ष्',
+    '5':'छ', '´':'झ', '1':'ज्ञ', '°':'ङ्ढ', '=':'.', 'Æ':'”', '‹':'ङ्घ', '%':'५',
+    '¤':'झ्', '!':'१', '-':'(', '›':'द्र', ')':'०', '…':'‘', 'Ü':'%'
+  };
+
+  // Applied in order after the character map — handles everything the
+  // map alone can't: matra reordering, reph ("{") placement, and a
+  // handful of two-key letter combinations (e.g. consonant + "m").
+  const postRules = [
+    ['्ा', ''], ['(त्र|त्त)([^उभप]+?)m', '$1m$2'], ['त्रm', 'क्र'], ['त्तm', 'क्त'],
+    ['([^उभप]+?)m', 'm$1'], ['उm', 'ऊ'], ['भm', 'झ'], ['पm', 'फ'], ['इ\\{', 'ई'],
+    ['ि((.्)*[^्])', '$1ि'], ['(.[ािीुूृेैोौंःँ]*?)\\{', '{$1'],
+    ['((.्)*)\\{', '{$1'], ['\\{', 'र्'],
+    ['([ाीुूृेैोौंःँ]+?)(्(.्)*[^्])', '$2$1'],
+    ['्([ाीुूृेैोौंःँ]+?)((.्)*[^्])', '्$2$1'],
+    ['([ंँ])([ािीुूृेैोौः]*)', '$2$1'],
+    ['ँँ', 'ँ'], ['ंं', 'ं'], ['ेे', 'े'], ['ैै', 'ै'], ['ुु', 'ु'], ['ूू', 'ू'],
+    ['^ः', ':'], ['टृ', 'ट्ट'], ['ेा', 'ाे'], ['ैा', 'ाै'],
+    ['अाे', 'ओ'], ['अाै', 'औ'], ['अा', 'आ'], ['एे', 'ऐ'], ['ाे', 'ो'], ['ाै', 'ौ']
+  ];
+
+  function convertText(text) {
+    let out = '';
+    for (const ch of text) out += (ch in charMap ? charMap[ch] : ch);
+    for (const [pattern, replacement] of postRules) {
+      out = out.replace(new RegExp(pattern, 'g'), replacement);
+    }
+    return out;
+  }
+
+  function walk(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent = convertText(node.textContent);
+    } else if (node.nodeType === Node.ELEMENT_NODE && !node.classList.contains('no-convert')) {
+      // A .preeti-text nested inside another one is converted here, so mark
+      // it done; converting Unicode a second time scrambles the ि matra.
+      node.classList.remove('preeti-text');
+      node.childNodes.forEach(walk);
+    }
+  }
+
+  // Exposed so text added later by JavaScript (policy popup, ingredient
+  // list, order popup messages) can also be written in Preeti.
+  window.preeti = convertText;
+  window.preetiConvertIn = function (root) { walk(root); };
+  // Turns plain digits into Preeti digit keys (1 -> !, 2 -> @ ...), so
+  // numbers written by JavaScript can go through window.preeti too.
+  window.preetiDigits = function (s) {
+    return String(s).replace(/[0-9]/g, function (d) { return ')!@#$%^&*('.charAt(+d); });
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.preeti-text').forEach(function (el) {
+      if (!el.classList.contains('preeti-text')) return; // already done via its parent
+      walk(el);              // converts text nodes only — <strong>/<em>/<br> stay intact
+      el.classList.remove('preeti-text'); // run once, don't reprocess already-fixed text
+    });
+  });
+})();
+</script>
+
+<script>
+/* Fill in the order details saved by the /ne/ order form (Preeti code,
+   converted with window.preeti). A direct visit shows the generic message. */
+(function(){ try {
+  var o = JSON.parse(sessionStorage.getItem('swas_ne_order') || 'null');
+  if (!o || !o.ts || Date.now() - o.ts > 3600000) return;
+  if (o.label && o.phone) {
+    document.getElementById('msg').textContent = window.preeti("xfdLn] tkfO{+sf] " + o.label + " sf] nflu c8{/ k|fKt uof}{+. 8]lne/L ;'lglZrt ug{ xfdL tkfO{+nfO{ " + window.preetiDigits(o.phone) + " df ;Dks{ ug]{5f}+. ;fdfg cfOk'u]kl5 dft| k};f ltg'{xf]:.");
+  }
+  if (o.label) document.getElementById('sPack').textContent = window.preeti(o.label);
+  document.getElementById('sTotal').textContent = window.preeti('? ' + window.preetiDigits(Number(o.value).toLocaleString('en-US')));
+  document.getElementById('sum').hidden = false;
+} catch (e) {} })();
+</script>
+</body>
+</html>

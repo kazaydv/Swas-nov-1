@@ -1,0 +1,732 @@
+ <!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>घुर्नुको सबैभन्दा डरलाग्दो कुरा आवाज होइन | स्वास माउथ प्याच</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ठूलो स्वरमा घुर्नु एउटा चेतावनीको संकेत हुन सक्छ। तपाईं सुत्दा के हुन्छ हेर्नुहोस्, र नेपालभर निःशुल्क क्यास अन डेलिभरीमा स्वास माउथ प्याच अर्डर गर्नुहोस्।">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="icon" href="https://nea.swas.site/Images/Untitled-design-10.png">
+<link rel="apple-touch-icon" href="https://nea.swas.site/Images/Untitled-design-10.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@600;700&family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF6EC; --panel:#FFFEFA; --ink:#232A2E; --sub:#6B6459;
+    --line: rgba(35,42,46,0.15); --accent:#D97757; --accent-hover:#C2683F; --tag-bg:#EFE7D6; --gold:#9C8552;
+    --alarm:#C0392B; --amber:#B7791F;
+    --serif:'Noto Serif Devanagari','Source Serif 4', Georgia, serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:'Noto Sans Devanagari','Inter', system-ui, sans-serif; -webkit-font-smoothing:antialiased;}
+  :focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+  .wrap{max-width:640px; margin:0 auto; padding:32px 20px 60px;}
+  .masthead{display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--sub); border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:26px;}
+  .masthead b{color:var(--ink); font-weight:600;}
+  .tag{display:inline-block; background:var(--tag-bg); color:var(--ink); font-weight:600; font-size:12.5px; padding:5px 11px; border-radius:2px; margin-bottom:18px;}
+  h1{font-family:var(--serif); font-weight:700; font-size:clamp(28px,5.2vw,39px); line-height:1.18; letter-spacing:-0.01em; margin:0 0 16px;}
+  h2{font-family:var(--serif); font-weight:700; font-size:clamp(24px,4.6vw,30px); line-height:1.2; letter-spacing:-0.01em; margin:0 0 14px;}
+  .sub{font-size:18px; color:var(--sub); line-height:1.45; margin:0 0 20px; font-family:var(--serif);}
+  .byline{font-size:13.5px; color:var(--sub); margin-bottom:22px;}
+  .trustbar{display:flex; gap:16px 18px; justify-content:space-between; flex-wrap:wrap; padding:16px 4px; margin-bottom:30px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .trustbar .item{flex:1 1 150px; display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--sub); font-weight:500; line-height:1.3;}
+  .trustbar svg{flex-shrink:0; width:18px; height:18px; color:var(--gold);}
+  figure{margin:0 0 30px;}
+  figure img{width:100%; height:auto; display:block; border-radius:4px; border:1px solid var(--line);}
+  figcaption{font-size:12.5px; color:var(--sub); text-align:center; margin-top:10px;}
+  article p{font-size:17px; line-height:1.7; margin:0 0 20px; max-width:38em;}
+  .drop{font-size:19px;}
+  .solution{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:22px 24px; margin:8px 0 28px;}
+  .solution h3{margin:0 0 8px; font-size:16px; font-family:var(--serif); font-weight:600;}
+  .solution p{margin:0; font-size:15.5px; color:var(--sub);}
+  .disclaimer{font-size:11.5px; color:var(--sub); text-align:center; margin:6px 0 30px;}
+  ul.checks{list-style:none; margin:0 0 30px; padding:0; display:grid; gap:11px;}
+  ul.checks li{font-size:16px; padding-left:24px; position:relative;}
+  ul.checks li::before{content:"—"; position:absolute; left:0; color:var(--sub);}
+  .cta{display:block; text-align:center; background:var(--accent); color:var(--ink); text-decoration:none; font-weight:600; font-size:17px; padding:16px 24px; border-radius:4px; border:0; width:100%; font-family:inherit; cursor:pointer;}
+  .cta:hover{background:var(--accent-hover);}
+  .cta:active{opacity:.85;}
+  .cta[disabled]{opacity:.6; cursor:wait;}
+  .cta-wrap{margin:0 0 44px;}
+  .section{margin-top:48px; padding-top:34px; border-top:1px solid var(--line);}
+  .lede{font-size:16px; color:var(--sub); line-height:1.6; margin:0 0 22px;}
+
+  /* Sealed-vs-open comparison */
+  .compare{margin:6px 0 26px;}
+  .compare h3{font-family:var(--serif); font-weight:600; font-size:17px; margin:0 0 6px;}
+  .compare-lede{font-size:14px; color:var(--sub); margin:0 0 14px; line-height:1.5;}
+  .compare-grid{display:grid; gap:12px;}
+  .compare-card{display:flex; gap:14px; align-items:center; padding:14px 16px; border:1.5px solid var(--line); border-radius:6px; background:var(--panel);}
+  .compare-card svg{flex-shrink:0;}
+  .compare-card b{display:block; font-size:14px; margin-bottom:3px;}
+  .compare-card span{display:block; font-size:12.5px; color:var(--sub); line-height:1.4;}
+  .compare-card--swas{border-color:var(--accent);}
+
+  /* Mobile sticky order dock */
+  .dock{position:fixed; left:0; right:0; bottom:0; z-index:40; display:flex; align-items:center; justify-content:space-between; gap:14px; background:var(--panel); border-top:1px solid var(--line); padding:12px 18px; box-shadow:0 -6px 16px rgba(0,0,0,.1); transform:translateY(110%); transition:transform .25s ease;}
+  .dock.show{transform:translateY(0);}
+  .dock-info{display:flex; flex-direction:column; line-height:1.25;}
+  .dock-pack{font-size:11px; color:var(--sub);}
+  .dock-price{font-family:var(--serif); font-size:19px; font-weight:700; color:var(--ink);}
+  .dock-cta{background:var(--accent); color:var(--ink); text-decoration:none; font-weight:600; font-size:14px; padding:11px 18px; border-radius:4px; white-space:nowrap; font-family:inherit;}
+  @media (min-width:700px){ .dock{display:none;} }
+
+  /* Animated breathing trace */
+  .monitor{background:var(--panel); border:1px solid var(--line); border-radius:4px; margin:0 0 8px; overflow:hidden; transition:border-color .4s;}
+  .monitor[data-state="pause"]{border-color:rgba(192,57,43,.55);}
+  .mon-top{display:flex; justify-content:space-between; gap:10px; padding:11px 16px; font-size:12.5px; color:var(--sub); border-bottom:1px solid var(--line);}
+  .mon-top b{color:var(--ink); font-weight:600;}
+  .mon-screen{position:relative; height:150px;}
+  .mon-screen canvas{position:absolute; inset:0; width:100%; height:100%; display:block; -webkit-mask-image:linear-gradient(to right, transparent 0, #000 14%); mask-image:linear-gradient(to right, transparent 0, #000 14%);}
+  #state{position:absolute; left:16px; top:12px; font-size:13px; font-weight:600; color:var(--amber);}
+  .monitor[data-state="pause"] #state{color:var(--alarm);}
+  .mon-read{display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line);}
+  .mon-read div{padding:12px 16px;}
+  .mon-read div + div{border-left:1px solid var(--line);}
+  .mon-read b{display:block; font-family:var(--serif); font-size:32px; line-height:1; font-weight:700; font-variant-numeric:tabular-nums;}
+  .mon-read small{display:block; font-size:12px; color:var(--sub); margin-top:5px;}
+  .monitor[data-state="pause"] #pause, .monitor[data-state="pause"] #spo2{color:var(--alarm);}
+  .mon-cap{font-size:12.5px; color:var(--sub); text-align:center; margin:6px 0 4px;}
+
+  /* How to use */
+  ol.steps{list-style:none; margin:0 0 8px; padding:0; display:grid; gap:14px; counter-reset:s;}
+  ol.steps li{counter-increment:s; display:grid; grid-template-columns:34px 1fr; gap:12px; font-size:16px; line-height:1.5;}
+  ol.steps li::before{content:counter(s); font-family:var(--serif); font-weight:700; font-size:22px; line-height:1.1; color:var(--gold);}
+  ol.steps b{display:block; font-weight:600;}
+  ol.steps span{color:var(--sub); font-size:15px;}
+
+  /* Videos */
+  .videos{display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 20px; margin:0 -20px 10px; padding:0 20px 8px; -webkit-overflow-scrolling:touch;}
+  .videos video{flex:0 0 58%; max-width:230px; aspect-ratio:9/16; object-fit:cover; background:#1b2124; border-radius:4px; scroll-snap-align:start; border:1px solid var(--line);}
+
+  /* Order */
+  .banner{margin-bottom:22px;}
+  .banner img{width:100%; max-width:280px; margin:0 auto; border-radius:6px;}
+  .order{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:24px 20px 22px; scroll-margin-top:12px;}
+  .order h2{margin-bottom:6px;}
+  .pack{display:grid; grid-template-columns:24px 1fr auto; gap:0 12px; align-items:start; padding:15px 16px; border:1.5px solid var(--line); border-radius:4px; background:var(--bg); cursor:pointer; position:relative; margin-bottom:12px;}
+  .pack input{position:absolute; opacity:0; width:1px; height:1px;}
+  .pack .dot{width:20px; height:20px; border:2px solid var(--sub); border-radius:50%; margin-top:1px;}
+  .pack input:checked + .dot{border-color:var(--accent); background:radial-gradient(var(--accent) 42%, transparent 48%);}
+  .pack input:focus-visible + .dot{outline:3px solid var(--gold); outline-offset:2px;}
+  .pack:has(input:checked){border-color:var(--accent); background:#fff;}
+  .pk-name{font-weight:600; font-size:16px; line-height:1.3;}
+  .pk-desc{display:block; font-size:13px; color:var(--sub); margin-top:3px; line-height:1.4;}
+  .pk-save{display:inline-block; font-size:12px; font-weight:600; color:var(--accent); background:var(--tag-bg); padding:2px 7px; border-radius:2px; margin-top:6px;}
+  .pk-price{text-align:right; font-family:var(--serif); font-weight:700; font-size:21px; line-height:1.1; white-space:nowrap;}
+  .pk-price s{display:block; font-family:'Noto Sans Devanagari','Inter', sans-serif; font-weight:400; font-size:13px; color:var(--sub); margin-top:3px;}
+  .badge{font-style:normal; position:absolute; top:-10px; right:12px; background:var(--accent); color:var(--ink); font-size:11.5px; font-weight:600; padding:3px 9px; border-radius:2px;}
+  .field{margin-top:16px;}
+  .field label{display:block; font-size:13.5px; font-weight:600; margin-bottom:6px;}
+  .field input, .field textarea{width:100%; font:inherit; font-size:16px; padding:13px 14px; border:1px solid rgba(35,42,46,.35); border-radius:4px; background:#fff; color:var(--ink);}
+  .field textarea{min-height:84px; resize:vertical;}
+  .field.bad input, .field.bad textarea{border-color:var(--alarm);}
+  .err{display:none; color:#B3261E; font-size:13px; margin-top:5px;}
+  .field.bad .err{display:block;}
+  .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+  .total{display:flex; justify-content:space-between; align-items:baseline; margin:22px 0 14px; padding-top:16px; border-top:1px solid var(--line); font-size:15px; color:var(--sub);}
+  .total b{font-family:var(--serif); font-size:26px; color:var(--ink);}
+  .form-err{display:none; background:#FBEAE7; border:1px solid #E7B5AE; color:#8E2A1F; font-size:14px; padding:12px 14px; border-radius:4px; margin-top:14px; line-height:1.5;}
+  .assure{text-align:center; font-size:13px; color:var(--sub); margin:12px 0 0; line-height:1.6;}
+  .success{display:none; text-align:center; padding:12px 4px 4px;}
+  .success h2{margin-bottom:10px;}
+  .success p{font-size:16px; color:var(--sub); line-height:1.6; margin:0 0 10px;}
+  .tick{width:52px; height:52px; border-radius:50%; background:var(--accent); color:var(--ink); display:grid; place-items:center; margin:0 auto 16px;}
+
+  .proof{display:flex; justify-content:space-between; gap:10px; text-align:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px 4px; margin:26px 0 0; font-size:14px; font-weight:600;}
+  .proof span{display:block; font-size:11.5px; color:var(--sub); font-weight:400; margin-top:3px;}
+
+  details{border-bottom:1px solid var(--line);}
+  details:first-of-type{border-top:1px solid var(--line);}
+  summary{cursor:pointer; list-style:none; padding:15px 32px 15px 0; font-weight:600; font-size:15.5px; position:relative;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+"; position:absolute; right:4px; top:11px; font-size:24px; font-weight:400; color:var(--sub);}
+  details[open] summary::after{content:"\2212";}
+  details p{font-size:15px; color:var(--sub); margin:0 0 16px; line-height:1.6;}
+  footer{border-top:1px solid var(--line); margin-top:36px; padding-top:20px; font-size:12.5px; color:var(--sub); text-align:center; line-height:1.7;}
+  footer a{color:var(--sub); text-decoration:underline;}
+  footer .note{margin:0 0 12px; color:var(--ink);}
+
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .monitor{transition:none;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="dock" id="dock" aria-hidden="true">
+    <div class="dock-info">
+      <span class="dock-pack" id="dockPack">भ्यालु प्याक</span>
+      <b class="dock-price" id="dockPrice">रु 1,900</b>
+    </div>
+    <a class="dock-cta preeti-text" href="#order">Kofs x]g'{xf]: / c8{/ ug'{xf]:</a>
+  </div>
+
+  <div class="masthead preeti-text">
+    <span><b>:jf; dfpy Kofr</b></span>
+    <span>lg›f / :jf; k|Zjf;</span>
+  </div>
+
+  <span class="tag preeti-text">:jf:Yo lj1fg</span>
+  <h1 class="preeti-text">3'g{'sf] ;a}eGbf 8/nfUbf] kIf cfjfh xf]Og. aLrsf] df}gtf xf].</h1>
+  <p class="sub preeti-text">l:nk PlKgof ePsfx¿df ;f; km]g{ /f]lsFbf 3'g]{ cfjfh klg /f]lsG5, slxn]sfxLF !) ;]s]G8 jf a9L ;do;Dd. To;kl5 PSsfl; ;f; tflgG5. w]/}h;f]nfO{ o:tf] eO/x]sf] slxNo} yfxf g} x'Fb}g.</p>
+  <p class="byline preeti-text">% ldg]6 k9fO</p>
+
+  <div class="trustbar preeti-text">
+    <div class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10V5l7-2 7 2v6c0 5.5-7 10-7 10Z" stroke-linejoin="round"></path><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span>xfOkf]Pnh]{lgs, Nof6]S;–/lxt u'Fb</span>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3" stroke-linecap="round"></path></svg>
+      <span>#)–lbgsf] k};f lkmtf{ Uof/]G6L</span>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="2"></rect><path d="M3 10h18M7 14h4" stroke-linecap="round"></path></svg>
+      <span>lgMz'Ns Sof; cg 8]lne/L</span>
+    </div>
+  </div>
+
+  <!-- Animated explanation -->
+  <div class="monitor" id="monitor" data-state="pause" role="img" aria-label="रातभरको सास फेर्ने नक्सा (सिमुलेसन): घुर्ने आवाज, त्यसपछि लगभग बाह्र सेकेन्ड सास नफेरी अक्सिजन घट्दै जाने, अनि एक्कासि सास तानिने।">
+    <div class="mon-top preeti-text"><span><b>/fte/sf] ;f; k|Zjf;</b></span><span>l;d'n];g</span></div>
+    <div class="mon-screen">
+      <canvas id="trace" aria-hidden="true" width="907" height="227"></canvas>
+      <span id="state">सास रोकिएको</span>
+    </div>
+    <div class="mon-read" aria-hidden="true">
+      <div><b id="pause">१२</b><small class="preeti-text">;]s]G8 ;f; gkm]/]sf]</small></div>
+      <div><b id="spo2">९०</b><small class="preeti-text">/utsf] clS;hg -Ü_</small></div>
+    </div>
+  </div>
+  <p class="mon-cap preeti-text">l:nk PlKgof sf] Pp6f 36gf jf:tljs ;dodf s:tf] b]lvg ;S5 eGg] b]vfOPsf] 5. of] s]jn pbfx/0fsf nflu xf], s'g} la/fdLsf] jf:tljs 8f6f xf]Og.</p>
+  <p class="disclaimer preeti-text">of] s]jn ;fdfGo hfgsf/Lsf nflu dft| xf]. s'g} /f]usf] lgbfg ug{ xf]Og – ;f; km]g]{ jf lg›f;DaGwL nuftf/ ;d:of eP 8fS6/nfO{ e]6\g'xf]:.</p>
+
+  <article>
+    <p class="drop preeti-text">3'g'{ cfjfhsf] ;d:of h:tf] nfU5. t/ nfvf}+ dflg;sf nflu, of] Pp6f r]tfjgL xf].</p>
+    <p class="preeti-text">ljZje/ cg'dflgt <strong>(#^ ldlnog dfG5]x?</strong>df l:nk PlKgof /x]sf] dflgG5, / cg';Gwfgstf{x¿sf cg';f/ w]/}h;f]sf] lgbfg slxNo} ePs} 5}g -<em>NofG;]6 /]l:k/]6/L d]l8l;g</em>, @)!(_. 7"nf] :j/df 3'g'{ o;sf] ;a}eGbf ;fdfGo nIf0fx¿dWo] Ps xf]. 3'g]{ ;a}nfO{ l:nk PlKgof x'Fb}g, t/ l:nk PlKgof ePsf w]/}h;f] 3'5{G – / w]/}n] o;nfO{ æd]/f] ;'Tg] afgL g} o:t} xf]Æ eg]/ a]jf:tf u5{G.</p>
+    <p><span class="preeti-text">dflysf] Plgd];gn] s] b]vfpF5 eg]</span>: <span class="preeti-text">;f; gnL ;fF3'l/G5 / 3fF6Lsf] tGt' sDkg x'G5 – ToxL g} 3'g]{ cfjfh xf]. To;kl5 ;f; gnL aGb x'G5 / ;f; km]g{ !) ;]s]G8 jf a9L ;do /f]lsG5, clg /utdf clS;hg 36\g yfN5. tkfO{+sf] dl:tisn] vt/fsf] ;+s]t lbG5, d'6'sf] w8\sg a9\5, / tkfO{+ PSsfl; ;f; tfGg'x'G5 jf If0fe/sf nflu Ao'Femg'x'G5. laxfg p7\bf tkfO{+nfO{ of] ;Demgf g} x'Fb}g.</span></p>
+    <p class="preeti-text">8fS6/x¿n] Ps 306fdf !% jf a9L k6s o:tf] /f]lsg] cj:yfnfO{ dWod l:nk PlKgof eG5G. ;ft 306fsf] /ftdf, of] <strong>!)) eGbf a9L k6s</strong> x'g ;S5.</p>
+    <p><span class="preeti-text">jiff}{+;Dd pkrf/ gul/Psf] l:nk PlKgof n] lgDg ;d:ofx¿;Fu ;DaGw /fV5</span>:</p>
+
+    <ul class="checks preeti-text">
+      <li>pRr /Strfk, k|foM s'g} ;+s]t gb]vfO{</li>
+      <li>k|sflzt cWoogx¿cg';f/, d'6'/f]u / :6|f]ssf] hf]lvd emG8} bf]Aa/</li>
+      <li>lbdfu ylst dx;'; x'g', dg pbf; x'g', / Wofg s]lG›t ug{ ufx|f] x'g'</li>
+      <li>uf8L rnfpFbf lg›f nfUg' / sfddf b'3{6gf x'g'</li>
+    </ul>
+
+    <p><span class="preeti-text">3'g'{ l:nk PlKgof geP klg, o;sf] dtna tkfO{+sf] ;f; km]g]{ k|ls|ofn] cfjZoseGbf a9L ldlxg]t ul//x]sf] xf]. Pp6f ;fdfGo sf/0f xf] ;'Tbf d'v v'nf /xg'</span>: <span class="preeti-text">aª\uf/f tn em5{, lha|f] k5fl8 ;5{, ;f; gnL ;fF3'l/G5 / tGt' sDkg x'G5.</span></p>
+
+    <figure>
+      <img src="https://nea.swas.site/Images/Nasal.jpg" alt="सुतिरहेको मान्छेको सास नली देखाउने दुई चित्र। बायाँतिर, निलो काँडाले नाकबाट सहज रूपमा बग्ने हावा देखाउँछ। दायाँतिर, रातो काँडाले खुला मुखबाट हावा छिर्दा सास नलीको तन्तु कम्पन हुने देखाउँछ।" loading="lazy">
+      <figcaption><span class="preeti-text">afofF</span>: <span class="preeti-text">gfsaf6 ;xh ¿kdf xfjf aUb}. bfofF</span>: <span class="preeti-text">d'vaf6 ;f; km]bf{ ;f; gnLsf] tGt' sDkg x'G5. -lrt|0f_</span></figcaption>
+    </figure>
+
+    <p class="preeti-text"><strong>3'g'{nfO{ uDeL/tfk"j{s lng s'g} v/fa /ft s'g'{kb}{g.</strong> cfh /flt g} tkfO{+n] ;f; km]g]{ tl/sf abNg ;Sg'x'G5. d'v la:tf/} aGb /x]kl5, z/L/ cfkm}+ gfsaf6 ;f; km]g{df kmls{G5.</p>
+
+    <figure>
+      <img src="https://nea.swas.site/Images/Hero.jpg" alt="स्वास माउथ प्याच ओठमाथि लगाइएको चित्रण" loading="lazy">
+    </figure>
+
+    <div class="solution">
+      <h3><span class="preeti-text">;dfwfg</span>: <span class="preeti-text">:jf; dfpy Kofr</span></h3>
+      <p class="preeti-text">cf]7dfly /fte/ nufOg] g/d, 5fnfd}t|L k§L. o;n] d'vnfO{ cf/fdbfoL tl/sfn] aGb /fV5 – k"0f{ ¿kdf 6fFl;g] xf]Og – tfls ;'Tbf ;f; gfsaf6 km]l/G5.</p>
+    </div>
+
+    <div class="compare preeti-text">
+      <h3>cfsf/n] lsg km/s kf5{</h3>
+      <p class="compare-lede">clwsf+z dfpy 6]k k"0f{ ¿kdf 6fFl;g] k§L x'G5. :jf; eg] km/s tl/sfn] ag]sf] 5.</p>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="14" width="32" height="12" rx="6" fill="var(--sub)"></rect></svg>
+          <div>
+            <b>;fwf/0f dfpy 6]k</b>
+            <span>k"0f{ ¿kdf 6fFl;Psf] – cfjZos k/] af]Ng jf d'v vf]Ng ;lsFb}g.</span>
+          </div>
+        </div>
+        <div class="compare-card compare-card--swas">
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="14" width="32" height="12" rx="6" fill="none" stroke="var(--accent)" stroke-width="4"></rect><ellipse cx="20" cy="20" rx="6" ry="4" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"></ellipse></svg>
+          <div>
+            <b>:jf; dfpy Kofr</b>
+            <span>aLrdf v'nf 7fpF – gfsaf6 ;f; km]g{ cf]7 aGb /xG5, t/ tkfO{+ cem} d'v vf]Ng ;Sg'x'G5.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="checks">
+      <li class="preeti-text">;'Tbf gfsaf6 ;f; km]g{ d2t u5{</li>
+      <li class="preeti-text">d'v v'nf x'Fbf x'g] 3'g]{ cfjfh 36fpg] nIo /fV5</li>
+      <li class="preeti-text">xfOkf]Pnh]{lgs, Nof6]S;–/lxt u'Fb – x/]s /ft k|of]u ug{ ldNg] vfnsf] sf]dn</li>
+      <li><span class="preeti-text">h'g;'s} a]nf vf]Ng ;lhnf]</span>; <span class="preeti-text">aª\uf/fnfO{ ha/h:tL aGb u/fOFb}g</span></li>
+    </ul>
+  </article>
+
+  <div class="cta-wrap preeti-text"><a class="cta" href="#order">Kofs x]g'{xf]: / c8{/ ug'{xf]:</a></div>
+
+  <!-- How to use -->
+  <section class="preeti-text">
+    <h2>k|of]u ug]{ tl/sf</h2>
+    <ol class="steps">
+      <li><div><b>;kmf / ;'Svf agfpg'xf]:</b><span>cfˆgf cf]7 k'5\g'xf]: / ;'Svf ePsf] ;'lglZrt ug'{xf]:.</span></div></li>
+      <li><div><b>Kofr nufpg'xf]:</b><span>k5fl8sf] sfuh x6fpg'xf]: / KofrnfO{ cf]7dfly la:tf/} lyRg'xf]:.</span></div></li>
+      <li><div><b>gfsaf6 ;f; km]g'{xf]:</b><span>;fdfGo ¿kdf ;'Tg'xf]:. laxfg p7]kl5 lgsfNg'xf]:. Pp6f Kofr Ps /ftsf nflu dft| xf].</span></div></li>
+    </ol>
+  </section>
+
+  <!-- Creator videos -->
+  <section class="section preeti-text">
+    <h2>k|of]udf x]g'{xf]:</h2>
+    <p class="lede">:jf; k|of]u u/]sf ls|P6/x¿sf lel8of]. x]g{ 6\ofk ug'{xf]:.</p>
+    <div class="videos">
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/1.mp4#t=0.1"></video>
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/2.mp4#t=0.1"></video>
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/3.mp4#t=0.1"></video>
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/4.mp4#t=0.1"></video>
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/5.mp4#t=0.1"></video>
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/6.mp4#t=0.1"></video>
+      <video controls playsinline preload="metadata" src="https://nea.swas.site/Images/7.mp4#t=0.1"></video>
+    </div>
+  </section>
+
+  <!-- Order -->
+  <section class="section" id="order-section">
+    <figure class="banner"><img src="https://nea.swas.site/Images/Logo.jpg" alt="स्वास" width="800" height="489" loading="lazy"></figure>
+
+    <div class="order" id="order">
+      <form id="orderForm" novalidate>
+        <h2 class="preeti-text">cfˆgf] Kofs 5fGg'xf]:</h2>
+        <p class="lede preeti-text" style="margin-bottom:22px">g]kfne/ lgMz'Ns 8]lne/L. ;fdfg cfOk'u]kl5 dft| k};f ltg'{xf]:.</p>
+
+        <label class="pack preeti-text">
+          <input type="radio" name="pack" value="Starter Pack (1 box)" data-price="1200" data-list="1500" data-label=";'?jft Kofs">
+          <span class="dot"></span>
+          <span>
+            <span class="pk-name">;'?jft Kofs</span>
+            <span class="pk-desc">! a§f · #) Kofr · ! dlxgf</span>
+            <span class="pk-save">? #)) art</span>
+          </span>
+          <span class="pk-price">? !,@))<s>? !,%))</s></span>
+        </label>
+
+        <label class="pack preeti-text">
+          <em class="badge">;a}eGbf nf]slk|o</em>
+          <input type="radio" name="pack" value="Value Pack (2 boxes)" data-price="1900" data-list="3000" checked data-label="Eofn' Kofs">
+          <span class="dot"></span>
+          <span>
+            <span class="pk-name">Eofn' Kofs</span>
+            <span class="pk-desc">@ a§f · ^) Kofr · @ dlxgf<br>k|lt a§f ? (%)</span>
+            <span class="pk-save">? !,!)) art</span>
+          </span>
+          <span class="pk-price">? !,())<s>? #,)))</s></span>
+        </label>
+
+        <label class="pack preeti-text">
+          <input type="radio" name="pack" value="Complete Pack (3 boxes)" data-price="2400" data-list="4500" data-label="slDKn6 Kofs">
+          <span class="dot"></span>
+          <span>
+            <span class="pk-name">slDKn6 Kofs</span>
+            <span class="pk-desc"># a§f · () Kofr · # dlxgf<br>k|lt a§f ? *))</span>
+            <span class="pk-save">? @,!)) art</span>
+          </span>
+          <span class="pk-price">? @,$))<s>? $,%))</s></span>
+        </label>
+
+        <div class="field preeti-text" id="f-name">
+          <label for="name">k"/f gfd</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="तपाईंको नाम">
+          <div class="err">s[kof cfˆgf] gfd n]Vg'xf]:.</div>
+        </div>
+        <div class="field preeti-text" id="f-phone">
+          <label for="phone">kmf]g gDa/</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="98XXXXXXXX">
+          <div class="err">s[kof !) c+ssf] g]kfnL df]afOn gDa/ n]Vg'xf]:.</div>
+        </div>
+        <div class="field preeti-text" id="f-address">
+          <label for="address">8]lne/L 7]ufgf</label>
+          <textarea id="address" name="address" autocomplete="street-address" placeholder="शहर, क्षेत्र, सडक, ल्यान्डमार्क"></textarea>
+          <div class="err">s[kof cfˆgf] 8]lne/L 7]ufgf n]Vg'xf]:.</div>
+        </div>
+
+        <div class="hp" aria-hidden="true"><label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="total"><span class="preeti-text">hDdf /sd, 8]lne/Ldf ltg]{</span><b id="total">रु 1,900</b></div>
+        <button class="cta preeti-text" type="submit" id="submitBtn">d]/f] c8{/ ug'{xf]:</button>
+        <div class="form-err" id="formErr" role="alert"></div>
+        <p class="assure preeti-text">lgMz'Ns Sof; cg 8]lne/L · #)–lbgsf] k};f lkmtf{ Uof/]G6L<br>@–# sfo{lbglet| 8]lne/L</p>
+      </form>
+
+      <div class="success" id="success" role="status">
+        <div class="tick"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></div>
+        <h2 class="preeti-text">wGojfb. tkfO{+sf] c8{/ k|fKt eof].</h2>
+        <p id="successMsg"></p>
+        <p class="preeti-text">k|Zg 5&lt; <a href="tel:9740265823">(&amp;$)@^%*@#</a> df kmf]g ug'{xf]:.</p>
+      </div>
+    </div>
+
+    <div class="proof preeti-text">
+      <div>lgMz'Ns Sof; cg 8]lne/L<span>g]kfne/</span></div>
+      <div>#)–lbg<span>k};f lkmtf{ Uof/]G6L</span></div>
+      <div>@–# lbg<span>8]lne/L</span></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="preeti-text">dflg;x¿n] ;f]Wg] s]xL k|Zgx¿</h2>
+    <details class="preeti-text">
+      <summary>3'g'{sf] dtna dnfO{ l:nk PlKgof 5 eGg] xf]&lt;</summary>
+      <p>;w}+ xf]Og. w]/} dflg; l:nk PlKgof geO{ klg 3'5{G, t/ x/]s /ft 7"nf] :j/df 3'g'{ o;sf] Pp6f ;fdfGo nIf0f xf]. of] k]h ;fdfGo hfgsf/Lsf nflu dft| xf], lgbfg xf]Og – lg›f jf ;f; km]g]{;DaGwL nuftf/ ;d:of eP s[kof 8fS6/nfO{ e]6\g'xf]:.</p>
+    </details>
+    <details class="preeti-text">
+      <summary>s] o;n] d'v vf]Ng} g;lsg] h:tf] dx;'; u/fpF5&lt;</summary>
+      <p>xf]Og. o;n] cf]7nfO{ la:tf/} ldnfP/ /fV5, t/ cfjZos k/] tkfO{+ cem} d'v vf]Ng ;Sg'x'G5 – of] sl;nf] ;Ln xf]Og.</p>
+    </details>
+    <details class="preeti-text">
+      <summary>s] of] x/]s /ft k|of]u ug{ ;'/lIft 5&lt;</summary>
+      <p>o;sf] u'Fb xfOkf]Pnh]{lgs / Nof6]S;–/lxt 5, / x/]s /ft k|of]usf nflu g} l8hfOg ul/Psf] xf]. x/]s Kofr Ps k6s dft| k|of]u ug{sf nflu xf]. 5fnfdf hng dx;'; eP k|of]u aGb ug'{xf]:.</p>
+    </details>
+    <details class="preeti-text">
+      <summary>slt rfF8f] km/s dx;'; x'G5&lt;</summary>
+      <p>s]xL dflg;n] klxnf] s]xL /ftlet|} zfGt / ;xh ;f; km]/fO dx;'; u5{G. kl/0ffd km/s–km/s x'g ;S5, / k"0f{ ;'wf/ x'g !–@ xKtf;Dd nfUg ;S5.</p>
+    </details>
+    <details class="preeti-text">
+      <summary>c8{/ / e'StfgL s;/L x'G5&lt;</summary>
+      <p>dflysf] kmf/d eg'{xf]:. xfdL k'li6 ug{ tkfO{+nfO{ ;Dks{ u5f}{+, To;kl5 g]kfnsf] h'g;'s} 7fpFdf @–# sfo{lbglet| 8]lne/L u5f}{+. ;fdfg cfOk'u]kl5 dft| k};f ltg'{xf]:. 8]lne/L lgMz'Ns 5.</p>
+    </details>
+    <details>
+      <summary class="preeti-text">dnfO{ of] sfd gnfu] s] x'G5&lt;</summary>
+      <p><span class="preeti-text">tkfO{+ xfd|f] #)–lbgsf] k};f lkmtf{ Uof/]G6LcGtu{t ;'/lIft x'g'x'G5. (&amp;$)@^%*@# df kmf]g ug'{xf]: jf</span> patchswas@gmail.com <span class="preeti-text">df Od]n ug'{xf]:.</span></p>
+    </details>
+  </section>
+
+  <div class="cta-wrap preeti-text" style="margin-top:40px"><a class="cta" href="#order">:jf; Kofr c8{/ ug'{xf]:</a></div>
+
+  <footer>
+    <p class="note"><span class="preeti-text">gf]6</span>: <span class="preeti-text">of] Kofr l:nk PlKgof sf] pkrf/ xf]Og / lrlsT;f ;]jfsf] ljsNk xf]Og.</span></p>
+    <span class="preeti-text">:jf; dfpy Kofr · u|fxs ;xfotf</span>: <span class="preeti-text">(&amp;$)@^%*@# ·</span> patchswas@gmail.com<br>
+    <a href="https://swas.site/">swas.site</a>
+  </footer>
+
+</div>
+
+<script>
+/**
+ * Preeti (legacy Nepali font) -> Unicode Devanagari, for text that got
+ * pasted in raw (still keyboard-coded in Preeti instead of converted).
+ *
+ * USAGE: wrap ONLY the raw Preeti fragment itself in
+ *   <span class="preeti-text">...</span>
+ * Never wrap a whole paragraph/heading that also contains English
+ * words, a brand/product name, or numbers/prices. Preeti reuses plain
+ * Latin letters AND plain digit keys as its keyboard layout (e.g. the
+ * "6" key types ट, not the numeral 6 — real Devanagari numerals come
+ * from Shift+digit), so the converter cannot tell "60ml" or "Spray"
+ * apart from actual Preeti-coded text and WILL corrupt it. Anything
+ * inside class="no-convert" is always skipped as an extra safeguard if
+ * you must nest English inside a converted block.
+ *
+ * The map below is the full Preeti keyboard layout (all consonants,
+ * matras, conjuncts, reph, digits) plus the standard reordering rules
+ * Preeti needs (matras typed before a consonant but rendered after it,
+ * reph placement, vowel-sign collisions, etc.) — not a partial guess.
+ */
+(function () {
+  const charMap = {
+    '÷':'/', 'v':'ख', 'r':'च', '"':'ू', '~':'ञ्', 'z':'श', 'ç':'ॐ', 'f':'ा',
+    'b':'द', 'n':'ल', 'j':'व', '×':'×', 'V':'ख्', 'R':'च्', 'ß':'द्म', '^':'६',
+    'Û':'!', 'Z':'श्', 'F':'ँ', 'B':'द्य', 'N':'ल्', 'Ë':'ङ्ग', 'J':'व्', '6':'ट',
+    '2':'द्द', '¿':'रू', '>':'श्र', ':':'स्', '§':'ट्ट', '&':'७', '£':'घ्', '•':'ड्ड',
+    '.':'।', '«':'्र', '*':'८', '„':'ध्र', 'w':'ध', 's':'क', 'g':'न', 'æ':'“',
+    'c':'अ', 'o':'य', 'k':'प', 'W':'ध्', 'Ö':'=', 'S':'क्', 'Ò':'¨', '_':')',
+    '[':'ृ', 'Ú':'’', 'G':'न्', 'ˆ':'फ्', 'C':'ऋ', 'O':'इ', 'Î':'ङ्ख', 'K':'प्',
+    '7':'ठ', '¶':'ठ्ठ', '3':'घ', '9':'ढ', '?':'रु', ';':'स', "'":'ु', '#':'३',
+    '¢':'द्घ', '/':'र', '+':'ं', 'ª':'ङ', 't':'त', 'p':'उ', '|':'्र', 'x':'ह',
+    'å':'द्व', 'd':'म', '`':'ञ', 'l':'ि', 'h':'ज', 'T':'त्', 'P':'ए', 'Ý':'ट्ठ',
+    '\\':'्', 'Ù':';', 'X':'ह्', 'Å':'हृ', 'D':'म्', '@':'२', 'Í':'ङ्क', 'L':'ी',
+    'H':'ज्', '4':'द्ध', '±':'+', '0':'ण्', '<':'?', '8':'ड', '¥':'र्‍', '$':'४',
+    '¡':'ज्ञ्', ',':',', '©':'र', '(':'९', '‘':'ॅ', 'u':'ग', 'q':'त्र', '}':'ै',
+    'y':'थ', 'e':'भ', 'a':'ब', 'i':'ष्', '‰':'झ्', 'U':'ग्', 'Q':'त्त', ']':'े',
+    '˜':'ऽ', 'Y':'थ्', 'Ø':'्य', 'E':'भ्', 'A':'ब्', 'M':'ः', 'Ì':'न्न', 'I':'क्ष्',
+    '5':'छ', '´':'झ', '1':'ज्ञ', '°':'ङ्ढ', '=':'.', 'Æ':'”', '‹':'ङ्घ', '%':'५',
+    '¤':'झ्', '!':'१', '-':'(', '›':'द्र', ')':'०', '…':'‘', 'Ü':'%'
+  };
+
+  // Applied in order after the character map — handles everything the
+  // map alone can't: matra reordering, reph ("{") placement, and a
+  // handful of two-key letter combinations (e.g. consonant + "m").
+  const postRules = [
+    ['्ा', ''], ['(त्र|त्त)([^उभप]+?)m', '$1m$2'], ['त्रm', 'क्र'], ['त्तm', 'क्त'],
+    ['([^उभप]+?)m', 'm$1'], ['उm', 'ऊ'], ['भm', 'झ'], ['पm', 'फ'], ['इ\\{', 'ई'],
+    ['ि((.्)*[^्])', '$1ि'], ['(.[ािीुूृेैोौंःँ]*?)\\{', '{$1'],
+    ['((.्)*)\\{', '{$1'], ['\\{', 'र्'],
+    ['([ाीुूृेैोौंःँ]+?)(्(.्)*[^्])', '$2$1'],
+    ['्([ाीुूृेैोौंःँ]+?)((.्)*[^्])', '्$2$1'],
+    ['([ंँ])([ािीुूृेैोौः]*)', '$2$1'],
+    ['ँँ', 'ँ'], ['ंं', 'ं'], ['ेे', 'े'], ['ैै', 'ै'], ['ुु', 'ु'], ['ूू', 'ू'],
+    ['^ः', ':'], ['टृ', 'ट्ट'], ['ेा', 'ाे'], ['ैा', 'ाै'],
+    ['अाे', 'ओ'], ['अाै', 'औ'], ['अा', 'आ'], ['एे', 'ऐ'], ['ाे', 'ो'], ['ाै', 'ौ']
+  ];
+
+  function convertText(text) {
+    let out = '';
+    for (const ch of text) out += (ch in charMap ? charMap[ch] : ch);
+    for (const [pattern, replacement] of postRules) {
+      out = out.replace(new RegExp(pattern, 'g'), replacement);
+    }
+    return out;
+  }
+
+  function walk(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent = convertText(node.textContent);
+    } else if (node.nodeType === Node.ELEMENT_NODE && !node.classList.contains('no-convert')) {
+      // A .preeti-text nested inside another one is converted here, so mark
+      // it done; converting Unicode a second time scrambles the ि matra.
+      node.classList.remove('preeti-text');
+      node.childNodes.forEach(walk);
+    }
+  }
+
+  // Exposed so text added later by JavaScript (policy popup, ingredient
+  // list, order popup messages) can also be written in Preeti.
+  window.preeti = convertText;
+  window.preetiConvertIn = function (root) { walk(root); };
+  // Turns plain digits into Preeti digit keys (1 -> !, 2 -> @ ...), so
+  // numbers written by JavaScript can go through window.preeti too.
+  window.preetiDigits = function (s) {
+    return String(s).replace(/[0-9]/g, function (d) { return ')!@#$%^&*('.charAt(+d); });
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.preeti-text').forEach(function (el) {
+      if (!el.classList.contains('preeti-text')) return; // already done via its parent
+      walk(el);              // converts text nodes only — <strong>/<em>/<br> stay intact
+      el.classList.remove('preeti-text'); // run once, don't reprocess already-fixed text
+    });
+  });
+})();
+</script>
+
+<script>
+/* =====================  SETTINGS  ===================== */
+var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz6XXOcOSYAWCvu2Bm4lQoiH4p8o1iZnOZ0JRc4xZOE84SiT2GO4f22IJmr8ujVgWTZZw/exec'; // Google Sheet order endpoint
+var PIXEL_ID = '1076590971891627';                                              // Meta Pixel ID (optional)
+var BEMOB_PIXEL = 'https://lj6l2.bemobtrk.com/conversion.gif';                  // BeMob conversion pixel
+var BEMOB_CID_PARAM = 'cid';                                                    // URL parameter your BeMob campaign uses for the click ID
+/* ===================================================== */
+
+/* ---------- Meta Pixel ---------- */
+(function(){
+  if (!PIXEL_ID) { window.fbq = function(){}; return; }
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID); fbq('track', 'PageView'); fbq('track', 'ViewContent', {content_name:'SWAS Mouth Patch', currency:'NPR', value:1200});
+})();
+
+/* ---------- BeMob conversion (fires only after a real order is sent) ---------- */
+var BEMOB_CID = new URLSearchParams(window.location.search).get(BEMOB_CID_PARAM) || '';
+function fireBemobConversion(price){
+  if (!BEMOB_PIXEL) return;
+  var url = BEMOB_PIXEL + '?payout=' + encodeURIComponent(price) +
+            '&txid=SWAS-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+  if (BEMOB_CID) url += '&cid=' + encodeURIComponent(BEMOB_CID);
+  var img = new Image(1, 1);
+  img.src = url;
+}
+
+/* ---------- Order form ---------- */
+(function(){
+  var form = document.getElementById('orderForm');
+  var totalEl = document.getElementById('total');
+  var btn = document.getElementById('submitBtn');
+  var formErr = document.getElementById('formErr');
+  var started = false;
+  function money(n){ return window.preeti('? ' + window.preetiDigits(n.toLocaleString('en-US'))); }
+  function selected(){ return form.querySelector('input[name="pack"]:checked'); }
+  function updateTotal(){ totalEl.textContent = money(parseInt(selected().getAttribute('data-price'), 10)); }
+  form.addEventListener('change', function(e){ if (e.target.name === 'pack') updateTotal(); });
+  form.addEventListener('focusin', function(){ if (!started){ started = true; fbq('track', 'InitiateCheckout'); } });
+  updateTotal();
+
+  function setBad(id, bad){ document.getElementById(id).classList.toggle('bad', bad); }
+  function cleanPhone(v){
+    var d = (v || '').replace(/\D/g, '');
+    if (d.length === 13 && d.indexOf('977') === 0) d = d.slice(3);
+    return d;
+  }
+  ['name','phone','address'].forEach(function(k){
+    document.getElementById(k).addEventListener('input', function(){ setBad('f-' + k, false); });
+  });
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    formErr.style.display = 'none';
+    var name = form.name.value.trim();
+    var phone = cleanPhone(form.phone.value);
+    var address = form.address.value.trim();
+    var okName = name.length >= 2, okPhone = /^9\d{9}$/.test(phone), okAddr = address.length >= 6;
+    setBad('f-name', !okName); setBad('f-phone', !okPhone); setBad('f-address', !okAddr);
+    if (!(okName && okPhone && okAddr)){
+      var first = form.querySelector('.field.bad input, .field.bad textarea'); if (first) first.focus();
+      return;
+    }
+    var pack = selected();
+    var price = parseInt(pack.getAttribute('data-price'), 10);
+
+    // bots fill the hidden field: pretend it worked, send nothing (no pixels fire)
+    if (form.company.value){ showSuccess(pack.getAttribute('data-label') || pack.value, phone); return; }
+
+    if (!SHEET_ENDPOINT || SHEET_ENDPOINT.indexOf('PASTE_') === 0){
+      formErr.textContent = window.preeti("c8{/ kmf/d cem} tkfO{+sf] u'un l;6;Fu hf]l8Psf] 5}g. k]h ;]l6ªdf cfˆgf] PK; l:s|K6 ln+s yKg'xf]:.");
+      formErr.style.display = 'block'; return;
+    }
+
+    var q = new URLSearchParams(window.location.search);
+    var fd = new FormData();
+    fd.append('name', name);
+    fd.append('phone', phone);
+    fd.append('address', address);
+    fd.append('pack', pack.value);
+    fd.append('price', String(price));
+    fd.append('utm_source', q.get('utm_source') || '');
+    fd.append('utm_medium', q.get('utm_medium') || '');
+    fd.append('utm_campaign', q.get('utm_campaign') || '');
+    fd.append('utm_content', q.get('utm_content') || '');
+    fd.append('page', window.location.href.split('?')[0]);
+
+    btn.disabled = true; btn.textContent = window.preeti("tkfO{+sf] c8{/ k7fOFb}") + '…';
+
+    /* keepalive:true lets this request survive even if the visitor closes
+       the tab right after tapping submit. mode:'no-cors' still means this
+       .then() firing only confirms the browser sent the request, never that
+       Code.gs actually wrote a row to the Sheet — that can only be confirmed
+       in Apps Script's own Executions log. */
+    fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', keepalive: true, body: fd })
+      .then(function(){
+        fbq('track', 'Purchase', { value: price, currency: 'NPR', content_name: pack.value });
+        fireBemobConversion(price);
+        showSuccess(pack.getAttribute('data-label') || pack.value, phone);
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = window.preeti("d]/f] c8{/ ug'{xf]:");
+        formErr.textContent = window.preeti("xfdL tkfO{+sf] c8{/ k7fpg ;s]gf}+. s[kof cfˆgf] OG6/g]6 hfFr u/]/ km]l/ k|of; ug'{xf]:, jf (&$)@^%*@# df kmf]g ug'{xf]:.");
+        formErr.style.display = 'block';
+      });
+  });
+
+  function showSuccess(packName, phone){
+    form.style.display = 'none';
+    document.getElementById('successMsg').textContent = window.preeti("xfdLn] tkfO{+sf] " + packName + " sf] nflu c8{/ k|fKt uof}{+. 8]lne/L ;'lglZrt ug{ xfdL tkfO{+nfO{ " + window.preetiDigits(phone) + " df ;Dks{ ug]{5f}+. ;fdfg cfOk'u]kl5 dft| k};f ltg'{xf]:.");
+    document.getElementById('success').style.display = 'block';
+    document.getElementById('order').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+})();
+
+/* ---------- Mobile sticky order dock ---------- */
+(function(){
+  var dock = document.getElementById('dock');
+  var dockPrice = document.getElementById('dockPrice');
+  var dockPack = document.getElementById('dockPack');
+  var form = document.getElementById('orderForm');
+  var orderSection = document.getElementById('order');
+  if (!dock || !form || !orderSection) return;
+
+  function syncDock(){
+    var sel = form.querySelector('input[name="pack"]:checked');
+    if (!sel) return;
+    dockPrice.textContent = window.preeti('? ' + window.preetiDigits(parseInt(sel.getAttribute('data-price'), 10).toLocaleString('en-US')));
+    dockPack.textContent = sel.getAttribute('data-label') ? window.preeti(sel.getAttribute('data-label')) : sel.value.replace(/\s*\(.*\)/, '');
+  }
+  form.addEventListener('change', function(e){ if (e.target.name === 'pack') syncDock(); });
+  syncDock();
+
+  var pastHero = false;
+  var trustbar = document.querySelector('.trustbar');
+  if (trustbar && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){ pastHero = !entries[0].isIntersecting; refresh(); }, {threshold: 0}).observe(trustbar);
+  }
+  function refresh(){
+    var orderVisible = orderSection.getBoundingClientRect().top < window.innerHeight * 0.6;
+    var show = pastHero && !orderVisible;
+    dock.classList.toggle('show', show);
+    dock.setAttribute('aria-hidden', show ? 'false' : 'true');
+  }
+  window.addEventListener('scroll', refresh, {passive: true});
+  window.addEventListener('resize', refresh);
+})();
+
+/* ---------- Only one video plays at a time ---------- */
+(function(){
+  var vids = document.querySelectorAll('.videos video');
+  vids.forEach(function(v){
+    v.addEventListener('play', function(){ vids.forEach(function(o){ if (o !== v) o.pause(); }); });
+  });
+})();
+
+/* ---------- Animated breathing trace ---------- */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cv = document.getElementById('trace');
+  if (!cv) return;
+  var monitor = document.getElementById('monitor');
+  var stateEl = document.getElementById('state');
+  var pauseEl = document.getElementById('pause');
+  var spoEl = document.getElementById('spo2');
+  var CYCLE = 24, P0 = 8, P1 = 20, G1 = 21.4, PX = 46;
+  var COL_OK = '#2B3A36', COL_ALARM = '#C0392B', COL_GASP = '#B7791F';
+
+  function snore(t){
+    var a = 0.5 + 0.18 * Math.sin(t * 1.3), b = Math.sin(Math.PI * t);
+    var flutter = Math.sin(t * 150) * 0.11 * a;
+    return b > 0 ? b * a + flutter : b * a * 0.6;
+  }
+  function wave(t){
+    if (t < P0) return snore(t);
+    if (t < P1) return 0.015 * Math.sin(t * 2.1);
+    if (t < G1){ var g = (t - P1) / (G1 - P1); return Math.sin(Math.PI * g) * 0.95 + Math.sin(t * 150) * 0.06; }
+    return Math.sin(Math.PI * (t - G1) / 1.3) * 0.5;
+  }
+  function colorAt(t){ return (t >= P0 && t < P1) ? COL_ALARM : (t >= P1 && t < G1) ? COL_GASP : COL_OK; }
+  function mod(x, n){ return ((x % n) + n) % n; }
+  function readouts(tn){
+    var st = 'snore', pauseSec = 0, spo = 96;
+    if (tn >= P0 && tn < P1){ st = 'pause'; pauseSec = Math.floor(tn - P0) + 1; spo = 96 - 6 * ((tn - P0) / (P1 - P0)); }
+    else if (tn >= P1 && tn < G1 + 1.2){ st = 'gasp'; pauseSec = P1 - P0; spo = 90 + 2 * ((tn - P1) / 2.6); }
+    else if (tn >= G1 + 1.2){ spo = 92 + 4 * Math.min(1, (tn - G1 - 1.2) / (CYCLE - G1 - 1.2)); }
+    if (monitor.getAttribute('data-state') !== st){
+      monitor.setAttribute('data-state', st);
+      stateEl.textContent = st === 'pause' ? window.preeti(";f; /f]lsPsf]") : st === 'gasp' ? window.preeti("xfFˆb}") + ': ' + window.preeti("If0fe/ Ao'Flemg]") : window.preeti("3'b}{");
+    }
+    pauseEl.textContent = window.preeti(window.preetiDigits(pauseSec)); spoEl.textContent = window.preeti(window.preetiDigits(Math.round(spo)));
+  }
+  function draw(now){
+    var dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
+    if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)){ cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
+    var ctx = cv.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    var mid = H * 0.58, amp = H * 0.34;
+    ctx.strokeStyle = 'rgba(35,42,46,0.07)'; ctx.lineWidth = 1; ctx.beginPath();
+    for (var g = 0; g < W / PX + 2; g++){ var gx = W - (mod(now, 1) + g) * PX; ctx.moveTo(gx, 0); ctx.lineTo(gx, H); }
+    ctx.moveTo(0, mid); ctx.lineTo(W, mid); ctx.stroke();
+    ctx.lineWidth = 2.4; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    var prevX = null, prevY = null, prevC = COL_OK;
+    for (var x = 0; x <= W; x += 1.5){
+      var t = mod(now - (W - x) / PX, CYCLE), y = mid - wave(t) * amp, c = colorAt(t);
+      if (prevX !== null){ ctx.strokeStyle = c; ctx.beginPath(); ctx.moveTo(prevX, prevY); ctx.lineTo(x, y); ctx.stroke(); }
+      prevX = x; prevY = y; prevC = c;
+    }
+    ctx.fillStyle = prevC; ctx.beginPath(); ctx.arc(W - 2, prevY, 3.6, 0, Math.PI * 2); ctx.fill();
+    readouts(mod(now, CYCLE));
+  }
+  if (reduce){ draw(17); window.addEventListener('resize', function(){ draw(17); }); }
+  else {
+    var start = performance.now(), visible = true;
+    if ('IntersectionObserver' in window){ new IntersectionObserver(function(e){ visible = e[0].isIntersecting; }).observe(monitor); }
+    (function loop(ts){ if (visible && !document.hidden) draw(5 + (ts - start) / 1000); requestAnimationFrame(loop); })(start);
+  }
+})();
+</script>
+
+</body>
+</html>

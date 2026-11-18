@@ -820,6 +820,26 @@ html,body{overflow-x:clip !important;}
   // ---------------------------------------------------------------
   const ORDER_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6XXOcOSYAWCvu2Bm4lQoiH4p8o1iZnOZ0JRc4xZOE84SiT2GO4f22IJmr8ujVgWTZZw/exec";
 
+/* ---------- Visitor IP for the server-side Purchase event ----------
+   Meta needs client_ip_address together with client_user_agent. The IP is
+   fetched once on page load; an order waits at most ~1.5s for it, then sends
+   without it rather than blocking the order. */
+var __visitorIp = '';
+var __visitorIpReady = false;
+var __visitorIpPromise = fetch('https://api.ipify.org?format=json')
+  .then(function (r) { return r.json(); })
+  .then(function (d) { __visitorIp = (d && d.ip) || ''; __visitorIpReady = true; })
+  .catch(function () { __visitorIpReady = true; });
+function __waitForIp(fn) {
+  if (__visitorIpReady) { fn(); return; }
+  var done = false;
+  function go() { if (!done) { done = true; fn(); } }
+  __visitorIpPromise.then(go);
+  setTimeout(go, 1500);
+}
+
+
+
   // Keep UTMs from the ad link for the whole visit (saved to the order sheet)
   (function(){
     var q = new URLSearchParams(location.search);
@@ -896,7 +916,10 @@ html,body{overflow-x:clip !important;}
       fd.append('fbp', getCookie('_fbp'));
       fd.append('fbc', getCookie('_fbc'));
       fd.append('user_agent', navigator.userAgent);
-      fetch(ORDER_SCRIPT_URL, { method: "POST", mode: "no-cors", keepalive: true, body: fd })
+      fd.append('client_ip', __visitorIp);  // sent raw; server forwards as client_ip_address
+      __waitForIp(function () {
+        if (__visitorIp) fd.set('client_ip', __visitorIp);
+        fetch(ORDER_SCRIPT_URL, { method: "POST", mode: "no-cors", keepalive: true, body: fd })
         .then(function(){
           try { sessionStorage.setItem('swas_order', JSON.stringify(order)); } catch (x) {}
           window.location.href = "thankyou.html";
@@ -905,6 +928,7 @@ html,body{overflow-x:clip !important;}
           sb.disabled = false; sb.textContent = 'Order Now';
           alert('इन्टरनेट समस्या भयो। कृपया फेरि प्रयास गर्नुहोस्।');
         });
+      });
     } else {
       alert("Order form ready: connect your ORDER_SCRIPT_URL at the top of the script tag to go live.");
     }

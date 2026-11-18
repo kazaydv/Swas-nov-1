@@ -518,6 +518,26 @@ var BEMOB_CID_PARAM = 'cid';                                                    
 /* ===================================================== */
 
 /* ---------- Meta Pixel ---------- */
+
+/* ---------- Visitor IP for the server-side Purchase event ----------
+   Meta needs client_ip_address together with client_user_agent. The IP is
+   fetched once on page load; an order waits at most ~1.5s for it, then sends
+   without it rather than blocking the order. */
+var __visitorIp = '';
+var __visitorIpReady = false;
+var __visitorIpPromise = fetch('https://api.ipify.org?format=json')
+  .then(function (r) { return r.json(); })
+  .then(function (d) { __visitorIp = (d && d.ip) || ''; __visitorIpReady = true; })
+  .catch(function () { __visitorIpReady = true; });
+function __waitForIp(fn) {
+  if (__visitorIpReady) { fn(); return; }
+  var done = false;
+  function go() { if (!done) { done = true; fn(); } }
+  __visitorIpPromise.then(go);
+  setTimeout(go, 1500);
+}
+
+
 (function(){
   if (!PIXEL_ID) { window.fbq = function(){}; return; }
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -603,6 +623,7 @@ function fireBemobConversion(price){
     fd.append('fbp', getCookie('_fbp'));
     fd.append('fbc', getCookie('_fbc'));
     fd.append('user_agent', navigator.userAgent);
+    fd.append('client_ip', __visitorIp);  // sent raw; server forwards as client_ip_address
 
     btn.disabled = true; btn.textContent = window.preeti("tkfO{+sf] c8{/ k7fOFb}") + '…';
 
@@ -611,7 +632,9 @@ function fireBemobConversion(price){
        .then() firing only confirms the browser sent the request, never that
        Code.gs actually wrote a row to the Sheet — that can only be confirmed
        in Apps Script's own Executions log. */
-    fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', keepalive: true, body: fd })
+    __waitForIp(function () {
+      if (__visitorIp) fd.set('client_ip', __visitorIp);
+      fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', keepalive: true, body: fd })
       .then(function(){
         // Purchase (Meta pixel + BeMob) now fires once on thankyou.html,
         // using this order's id as the eventID.
@@ -631,6 +654,7 @@ function fireBemobConversion(price){
         formErr.textContent = window.preeti("xfdL tkfO{+sf] c8{/ k7fpg ;s]gf}+. s[kof cfˆgf] OG6/g]6 hfFr u/]/ km]l/ k|of; ug'{xf]:, jf (&$)@^%*@# df kmf]g ug'{xf]:.");
         formErr.style.display = 'block';
       });
+    });
   });
 
   function showSuccess(packName, phone){
